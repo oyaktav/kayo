@@ -40,7 +40,7 @@ body {
 /* Mantido idêntico à versão que você gostou */
 .home-stack-wrapper {
   position: absolute;
-  top: 12%; left: 8%; 
+  top: 0%; left: 29%; 
   width: 320px; 
   height: 500px; /* Altura grande para caber o espaçamento */
   perspective: 1000px;
@@ -76,8 +76,8 @@ body {
 /* --- NOVAS NOTIFICAÇÕES (ESTILO iPHONE) --- */
 .notifications-wrapper {
   position: absolute;
-  bottom: 5%; /* Fica no canto inferior esquerdo */
-  left: 5%;
+  bottom: 3%; /* Fica no canto inferior esquerdo */
+  left: 35%;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -154,3 +154,134 @@ body {
 .title-bar { height: 40px; background: #f3f3f3; border-bottom: 1px solid #ddd; display: flex; align-items: center; padding: 0 15px; gap: 8px; }
 .dot { width: 12px; height: 12px; border-radius: 50%; }
 .red { background: #ff5f57; cursor: pointer; } .yellow { background: #febc2e; } .green { background: #28c840; }
+
+.icloud-profile-widget {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px); /* Efeito de vidro do iOS */
+  padding: 12px 16px;
+  border-radius: 20px;
+  width: 320px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.icloud-profile-widget:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.icloud-avatar-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+  background: #eee;
+}
+
+.icloud-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.icloud-info {
+  flex-grow: 1;
+}
+
+.icloud-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  letter-spacing: -0.3px;
+}
+
+.icloud-details {
+  margin: 0;
+  font-size: 11px;
+  color: #ffffff;
+  margin-top: 2px;
+}
+
+.icloud-arrow {
+  margin-left: 10px;
+}
+
+.ios-map-widget {
+  position: absolute;
+  top: 25%; /* Ajuste a posição conforme preferir */
+  right: 12%;
+  width: 160px;
+  height: 160px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 10;
+}
+
+.ios-map-widget:hover {
+  transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+.ios-map-widget:active {
+  transform: scale(0.95); /* Efeito de clique */
+}
+
+.map-content {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 28px; /* Curvatura padrão dos widgets de iPhone */
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.map-img-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a foto preencha o quadrado sem distorcer */
+}
+
+.map-pin-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.pin-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #007aff;
+  border-radius: 50%;
+}
+
+.pin-text {
+  font-size: 10px;
+  font-weight: 700;
+  color: #333;
+}
+
+.map-widget-label {
+  position: absolute;
+  bottom: 8px;
+  left: 12px;
+  font-size: 9px;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+}
