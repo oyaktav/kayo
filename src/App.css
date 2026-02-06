@@ -285,3 +285,48 @@ body {
   color: rgba(0, 0, 0, 0.4);
   text-transform: uppercase;
 }
+
+/* Grade de ícones dentro da pasta aberta */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.project-item {
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.project-item:hover { transform: scale(1.08); }
+
+.project-item img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Estilo da Galeria de Fotos */
+.detail-content {
+  padding: 20px;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}

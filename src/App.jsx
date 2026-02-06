@@ -4,45 +4,85 @@ import './App.css';
 /* --- SUAS IMAGENS --- */
 import fotoPerfil from './assets/img1.png';
 import imgMapa from './assets/img2.png';
-import imgProjeto1 from './assets/img3.png';
-import imgProjeto2 from './assets/img3.png'; 
-import imgProjeto3 from './assets/img3.png'; 
+import imgProjeto1 from './assets/arte.png';
+import imgProjeto2 from './assets/ferrari.png';
+import imgProjeto3 from './assets/sicliko.png'; 
 import iconPasta from './assets/icon.png';
+import iconInstagram from './assets/icon-ig.png';
+import iconPastaNova from './assets/pasta.png';
+// Importe as fotos que você quer usar (use os nomes reais dos arquivos na sua pasta assets)
+import capaA from './assets/capaA.png';
+import fotoA1 from './assets/fotoA1.png';
+import fotoA2 from'./assets/fotoA2.png';
+import fotoA3 from'./assets/fotoA3.png';
+
+import capaB from './assets/capaB.png';
+import fotoB1 from './assets/fotoB1.png';
+import fotoB2 from'./assets/fotoB2.png';
+import fotoB3 from'./assets/fotoB3.png';
+import bio from './assets/imgMapa.png';
+import eu from './assets/eu.png';
+import perfil from './assets/perfil.png';
+
+
+const meusProjetos = [
+  {
+    id: 1,
+    titulo: "Sicliko",
+    capa: capaA, 
+    // Usamos o nome 'fotos' para bater com o .map que você já tem
+    fotos: [capaA, fotoA1, fotoA2, fotoA3], 
+    descricao: "Identidade visual e direção criativada da marca."
+  },
+  {
+    id: 2,
+    titulo: "Ferrari Auto Center",
+    capa: capaB, 
+    fotos: [capaB, fotoB1, fotoB2, fotoB3], 
+    descricao: "Logo e identidade visual da marca."
+  }
+];
+  // Adicione mais projetos aqui se quiser
+
+
 
 function App() {
   const [telaAtual, setTelaAtual] = useState('desktop');
   const [projetoSelecionado, setProjetoSelecionado] = useState(null);
+  
 
   // --- CONFIGURAÇÃO DAS ABAS (MANTIDO O ESPAÇAMENTO PERFEITO) ---
   const abasProjetos = [
     { 
       id: 1, 
-      img: imgProjeto1, 
-      titulo: "Identidade Street", 
-      url: "kayo.com/projeto", 
+      img: imgProjeto1,
+      titulo: "Artesana Cromicas", 
+      url: "artesanacromicas.com/projeto", 
       top: '30px',      // Fundo
-      scale: 0.9, 
-      z: 1 
+      scale: 1, 
+      z: 1
     },
     { 
       id: 2, 
       img: imgProjeto2, 
-      titulo: "Design Camping", 
-      url: "kayo.com/projeto", 
+      titulo: "Ferrari Auto Center", 
+      url: "ferrariautocenter.com/projeto", 
       top: '150px',     // Distância para ver a foto de trás
-      scale: 0.95, 
-      z: 2 
+      scale: 1, 
+      z: 2
     },
     { 
       id: 3, 
       img: imgProjeto3, 
-      titulo: "Direção de Arte", 
-      url: "kayo.com/projeto", 
+      titulo: "Sicliko", 
+      url: "sicliko.com/projeto", 
       top: '330px',    // Distância para ver a foto do meio
       scale: 1, 
       z: 3 
     },
   ];
+
+  
 
   const irPara = (tela) => setTelaAtual(tela);
   const abrirDetalhe = (proj) => { setProjetoSelecionado(proj); setTelaAtual('detail'); };
@@ -56,17 +96,18 @@ function App() {
       )}
 
       {/* --- TELA 1: DESKTOP --- */}
+      
       {telaAtual === 'desktop' && (
         <div className="desktop-container">
           
-          {/* PILHA DE PROJETOS (STACK) - NÃO MEXI NISSO */}
+          {/* PILHA DE PROJETOS (STACK)  */}
           <div className="home-stack-wrapper">
             {abasProjetos.map((proj) => (
               <div 
                 key={proj.id}
                 className="stack-card"
                 style={{ top: proj.top, zIndex: proj.z, transform: `scale(${proj.scale})` }}
-                onClick={() => abrirDetalhe(proj)}
+                onClick={() => setTelaAtual('grid_projetos')}
               >
                 <div className="stack-header">
                   <span style={{fontSize:'1rem', fontWeight:'bold'}}>×</span>
@@ -77,6 +118,8 @@ function App() {
               </div>
             ))}
           </div>
+            </div>
+      )}
 
           {/* --- NOVAS NOTIFICAÇÕES (MENSAGENS iPHONE) --- */}
           <div className="notifications-wrapper">
@@ -91,7 +134,7 @@ function App() {
                 <span style={{fontSize: '0.7rem', color: '#666'}}>agora</span>
               </div>
               <div className="msg-sender">Kayo Taveira</div>
-              <div className="msg-text">Direção criativa e direção de arte</div>
+              <div className="msg-text">Direção criativa , direção de arte , marcas e projetos criativos</div>
             </div>
 
             {/* Mensagem 2 */}
@@ -104,37 +147,205 @@ function App() {
                 <span style={{fontSize: '0.7rem', color: '#666'}}>agora</span>
               </div>
               <div className="msg-sender">Kayo Taveira</div>
-              <div className="msg-text">Marcas, projetos criativos , artista e etc...</div>
+              <div className="msg-text">Sites , marketing e administração de perfis </div>
             </div>
 
           </div>
 
-          {/* Widget MAPA */}
+          {/* Perfil */}
           <div className="widget" style={{ top: '15%', right: '30%', width: '325px', height: '230px' }} onClick={() => irPara('bio')}>
             <img src={imgMapa} alt="Mapa" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             <div style={{position:'absolute', bottom:10, left:10, background:'white', padding:'2px 8px', borderRadius:8, fontSize:'0.7rem', fontWeight:'bold'}}></div>
           </div>
 
-          {/* Widget GMAIL */}
-          <div className="widget" style={{ bottom: '28%', right: '30%', width: '450px', padding: '100px' }} onClick={() => irPara('contact')}>
-            
-            <div style={{fontWeight: '600', marginBottom: '10px', color: '#d93025'}}>• </div>
-            <div style={{fontWeight: '600', marginBottom: '10px', color: '#d9af25'}}>• </div>
-            <div>Novo Orçamento</div>
-            <div style={{fontSize:'0.8rem', color:'#666', marginTop:5}}>E-mail:
-              Assunto:
-              Mensagem
-            </div>
-          </div>
+          {/* --- WIDGET GMAIL (CONTATO/ORÇAMENTO) --- */}
+  <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=kayotaveira2506@gmail.com&su=Orçamento - Projeto de Design"
+  target="_blank" // Abre em uma nova aba para não fechar seu site
+  rel="noopener noreferrer"
+  style={{ 
+    textDecoration: 'none',
+    bottom: '30%', 
+    right: '29%', 
+    width: '480px', 
+    height: 'auto', // Mudei para auto para o conteúdo caber
+    padding: '30px', // Reduzi de 150px para 30px para o texto aparecer
+    background: '#ffffff',
+    borderRadius: '25px',
+    boxShadow: '0 15px 35px rgba(0,0,0,0.15)',
+    borderTop: '20px solid #f1f3f4', 
+    borderBottom: '5px solid #f1f3f4',
+    position: 'absolute',
+    cursor: 'pointer',
+    transition: 'transform 0.2s',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '15px'
+  }}
+  onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
+  onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+>
+  {/* BOLINHAS DE CONTROLE NO TOPO (Ajustei a posição para aparecerem) */}
+  <div style={{ display: 'flex', gap: '5px', position: 'absolute', top: '-13px', left: '15px' }}> 
+    <div style={{ fontWeight: '700', fontSize: '1.1rem', color: '#d93025' }}>●</div>
+    <div style={{ fontWeight: '700', fontSize: '1.1rem', color: '#e4cd00' }}>●</div>
+    <div style={{ fontWeight: '700', fontSize: '1.1rem', color: '#25d934' }}>●</div>
+  </div> 
 
-          {/* Ícone Pasta */}
-          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-70%, -37%)', textAlign: 'center', cursor: 'pointer' }} onClick={() => irPara('https://open.spotify.com/playlist/39SNe68VOjDkZVIvm2OeSR?si=9V8eM9SJTq2WkU0j5imJZQ')}>
-            <img src={iconPasta} alt="Pasta" style={{ width: '125px' }} />
-            <div style={{background: 'rgba(0,0,0,0.0)', padding:'250px 0px', borderRadius:'125px', fontSize: '1.8rem', fontWeight: '600', marginTop: 0}}></div>
-          </div>
+  {/* CONTEÚDO DO E-MAIL */}
+  <div style={{ borderTop: '1px solid #eee', paddingTop: '10px' }}>
+    <div style={{ fontSize: '0.95rem', color: '#333', marginBottom: '10px' }}>
+      <span style={{ color: '#888' }}>Para:</span> kayotaveira2506@gmail.com
+    </div>
+    <div style={{ fontSize: '0.95rem', color: '#333', marginBottom: '15px' }}>
+      <span style={{ color: '#888' }}>Assunto:</span> Novo Orçamento
+    </div>
+    
+    {/* BOX DE MENSAGEM */}
+    <div style={{ 
+      background: '#f8f9fa', 
+      padding: '12px', 
+      borderRadius: '12px', 
+      fontSize: '0.85rem', 
+      color: '#666', 
+      minHeight: '80px',
+      lineHeight: '1.4',
+      border: '1px solid #eee'
+    }}>
+      Clique aqui para redigir sua mensagem...
+    </div>
+    
+    <p style={{ fontSize: '0.7rem', color: '#aaa', marginTop: '10px', textAlign: 'center' }}>
+      (Ao clicar, seu aplicativo de e-mail será aberto)
+    </p>
 
-        </div>
-      )}
+  </div>
+
+</a>
+       {/* Spotify - Bloco Corrigido e Simplificado */}
+<div  
+  style={{ 
+    position: 'absolute', 
+    top: '28%', 
+    left: '50%', 
+    transform: 'translate(-70%, -37%)', 
+    textAlign: 'center', 
+    cursor: 'pointer',
+    width: '130px', /* Define uma largura fixa para ajudar na centralização */
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
+  }} 
+  onClick={() => window.open('https://open.spotify.com/playlist/6ASgnmFPmRRJ8Pb6Y9cuUX', '_blank')}
+>
+  <img 
+    src={iconPasta} 
+    alt="Spotify" 
+    style={{ 
+      width: '100%', 
+      height: 'auto', 
+      display: 'block',
+      marginBottom: '-25px' /* Removendo qualquer espaço extra da imagem */
+    }} 
+  />
+  
+  <p style={{ 
+    fontSize: '0.9rem', 
+    fontWeight: 'bold', 
+    color: '#000', 
+    margin: 0,        /* Zera as margens padrão do navegador */
+    padding: 0,
+    width: '100%',
+    textAlign: 'center'
+  }}>
+    Spotify
+  </p>
+</div>
+     
+{/*Instagram */}
+<div 
+  style={{ 
+    position: 'absolute', 
+    top: '79%', 
+    left: '49%', 
+    transform: 'translate(20%, -50%)', 
+    textAlign: 'center', 
+    cursor: 'pointer' 
+  }} 
+  onClick={() => window.open('https://www.instagram.com/kaynnzss/', '_blank')}
+>
+  <img src={iconInstagram} alt="Instagram" style={{ width: '130px' }} />
+  
+  <p style={{ fontSize: '0.9rem', fontWeight: 'bold', marginTop: '-25px', color: '#000000' }}>
+   Instagram
+  </p>
+</div>
+
+{/* Ícone de Pasta - Navegação Interna */}
+<div 
+  style={{ 
+    position: 'absolute', 
+    top: '9%', 
+    left: '44%', 
+    transform: 'translate(20%, 20%)', // Ajustado para ficar abaixo do Instagram
+    textAlign: 'center', 
+    cursor: 'pointer' 
+  }} 
+  onClick={() => setTelaAtual('grid_projetos')}
+>
+  <img 
+    src={iconPastaNova} 
+    alt="Meus Projetos" 
+    style={{ 
+      width: '125px', 
+      display: 'block',
+      mixBlendMode: 'multiply' // Remove o fundo branco se a imagem tiver
+    }} 
+  />
+  <p style={{ 
+    fontSize: '0.9rem', 
+    fontWeight: 'bold', 
+    color: '#000', 
+    marginTop: '-25px' 
+    
+  }}>
+  Projetos
+  </p>
+</div>
+
+{/* --- WIDGET INDEPENDENTE: BIO --- */}
+<div 
+  onClick={() => setTelaAtual('bio')}
+  style={{
+    position: 'absolute', top: '505px', left: '470px', // Ajuste a posição aqui
+    width: '400px', background: '#fff', borderRadius: '20px',height: '250px',
+    boxShadow: '0 10px 25px rgba(0,0,0,0.2)', cursor: 'pointer',
+    borderTop: '20px solid #e0e0e0', borderBottom: '20px solid #e0e0e0',
+    overflow: 'hidden', textAlign: 'center', transition: 'transform 0.2s'
+  }}
+  onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+  onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+>
+  <img src={bio} style={{ width: '100%', height: '230px', objectFit: 'cover' }} alt="Bio Widget" />
+  <p style={{ fontSize: '12px', fontWeight: 'bold', margin: '5px 0', color: '#000' }}></p>
+</div>
+
+{/* --- WIDGET INDEPENDENTE: INSTAGRAM --- */}
+<div 
+  onClick={() => window.open('https://www.instagram.com/kaynnzss/', '_blank')}
+  style={{
+    position: 'absolute', top: '650px', left: '1100px', // Fica ao lado do outro
+    width: '300px', background: '#fff', borderRadius: '25px',height: '250px',
+    boxShadow: '0 10px 25px rgba(0,0,0,0.2)', cursor: 'pointer',
+    borderTop: '12px solid #e0e0e0', borderBottom: '12px solid #e0e0e0',
+    overflow: 'hidden', textAlign: 'center', transition: 'transform 0.2s'
+  }}
+  onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+  onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+>
+  <img src={perfil} style={{ width: '125%', height: '300px', objectFit: 'cover' }} alt="Insta Widget" />
+  <p style={{ fontSize: '12px', fontWeight: 'bold', margin: '5px 0', color: '#000' }}>INSTAGRAM</p>
+</div>
 
       {/* --- OUTRAS TELAS --- */}
       {telaAtual === 'detail' && projetoSelecionado && (
@@ -149,23 +360,89 @@ function App() {
           </div>
         </div>
       )}
+{telaAtual === 'bio' && (
+  <div className="window-overlay">
+    <div className="mac-window" style={{ 
+      padding: '0', 
+      flexDirection: 'column', 
+      width: '900px', 
+      height: '900px', 
+      background: '#ffffff', 
+      borderRadius: '20px',
+      overflow: 'hidden',
+      boxShadow: '0 20px 50px rgba(0,0,0,0.2)'
+    }}>
       
-      {telaAtual === 'bio' && (
-        <div className="window-overlay">
-           <div className="mac-window" style={{padding: '0', flexDirection: 'row', width: '700px', height: '400px'}}>
-             <div style={{flex: 1, background: '#f9f9f9', padding: 30, display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
-               <div className="dot red" style={{marginBottom: 20}} onClick={fechar}></div>
-               <h2>Sobre Mim</h2>
-               <p style={{marginTop: 15, lineHeight: 1.6, fontSize: '0.9rem', color: '#555'}}>Sou o Kayo</p>
-             </div>
-             <div style={{flex: 1}}><img src={fotoPerfil} style={{width: '100%', height: '100%', objectFit: 'cover'}} alt="Kayo" /></div>
-           </div>
-        </div>
-      )}
+      {/* HEADER DA JANELA */}
+      <div style={{ 
+        width: '100%', 
+        padding: '20px', 
+        display: 'flex', 
+        alignItems: 'center', 
+        position: 'relative'
+      }}>
+        <div className="dot red" style={{ cursor: 'pointer' }} onClick={fechar}></div>
+        <h2 style={{ color: '#000', fontSize: '1.5rem', marginLeft: '20px', fontWeight: 'bold' }}>Sobre Mim</h2>
+      </div>
 
+      {/* ÁREA DE CONTEÚDO */}
+      <div style={{ flex: 1, position: 'relative', width: '100%', height: '100%' }}>
+        
+        {/* TEXTO DE INTRODUÇÃO (Agora com mais espaço para crescer) */}
+        <div style={{ textAlign: 'center', padding: '20px 50px' }}>
+          <p style={{ 
+            fontSize: '1.2rem', 
+            color: '#000', 
+            maxWidth: '750px', 
+            margin: '0 auto', 
+            lineHeight: '1.8',
+            textAlign: 'center' 
+          }}>
+             Sou o Kayo, Diretor Criativo e Designer apaixonado por transformar conceitos abstratos em identidades visuais memoráveis. Com foco em streetwear e design minimalista, meu trabalho busca o equilíbrio perfeito entre estética e funcionalidade. Aqui você pode escrever um texto bem maior que ele caberá perfeitamente!
+          </p>
+        </div>
+
+        {/* WIDGETS DESLOCADOS PARA BAIXO */}
+        {/* Foto 1 (Esquerda) */}
+        <div style={{
+          position: 'absolute', bottom: '100px', left: '60px',
+          width: '280px', background: '#fff', borderRadius: '25px',
+          boxShadow: '0 10px 30px rgba(0,0,0,0.15)', transform: 'rotate(-6deg)', zIndex: 3,
+          borderTop: '15px solid #e0e0e0', borderBottom: '15px solid #e0e0e0',
+          overflow: 'hidden'
+        }}>
+          <img src={bio} style={{ width: '100%', height: '220px', objectFit: 'cover' }} alt="Bio 1" />
+        </div>
+
+        {/* Foto 2 (Centro/Topo da pilha inferior) */}
+        <div style={{
+          position: 'absolute', bottom: '60px', left: '310px',
+          width: '280px', background: '#fff', borderRadius: '25px',
+          boxShadow: '0 15px 40px rgba(0,0,0,0.2)', transform: 'rotate(2deg)', zIndex: 5,
+          borderTop: '15px solid #e0e0e0', borderBottom: '15px solid #e0e0e0',
+          overflow: 'hidden'
+        }}>
+          <img src={eu} style={{ width: '100%', height: '260px', objectFit: 'cover' }} alt="Bio 2" />
+        </div>
+
+        {/* Foto 3 (Direita) */}
+        <div style={{
+          position: 'absolute', bottom: '120px', left: '600px',
+          width: '280px', background: '#fff', borderRadius: '25px',
+          boxShadow: '0 10px 30px rgba(0,0,0,0.15)', transform: 'rotate(-3deg)', zIndex: 4,
+          borderTop: '30px solid #e0e0e0', borderBottom: '15px solid #e0e0e0',
+          overflow: 'hidden'
+        }}>
+          <img src={imgMapa} style={{ width: '100%', height: '220px', objectFit: 'cover' }} alt="Bio 3" />
+        </div>
+
+      </div>
+    </div>
+  </div>
+)}
       {telaAtual === 'contact' && (
         <div className="window-overlay">
-           <div className="mac-window" style={{width: '600px', height: '450px'}}>
+           <div className="mac-window" style={{width: '900px', height: '900px'}}>
              <div className="title-bar"><div className="dot red" onClick={fechar}></div></div>
              <form style={{padding: '40px', display: 'flex', flexDirection: 'column', gap: '15px', height: '100%'}}>
                <h2 style={{color: '#333'}}>Fale Comigo</h2>
@@ -174,6 +451,49 @@ function App() {
                <button style={{padding: '12px', background: '#007aff', color: 'white', border: 'none', borderRadius: 8, fontWeight: 'bold'}}>Enviar Email</button>
              </form>
            </div>
+        </div>
+      )}
+
+      {/* --- NÍVEL 1: GRADE DE PROJETOS (Abre ao clicar na pasta.png) --- */}
+      {telaAtual === 'grid_projetos' && (
+        <div className="window-overlay">
+          <div className="mac-window" style={{width: '900px', height: '900px'}}>
+            <div className="title-bar">
+              <div className="dot red" onClick={() => setTelaAtual('desktop')}></div>
+              <span style={{fontSize: '0.8rem', color: '#fff'}}></span>
+            </div>
+            <div style={{padding: '20px', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px'}}>
+              {meusProjetos.map(proj => (
+                <div key={proj.id} onClick={() => { setProjetoSelecionado(proj); setTelaAtual('galeria_projeto'); }} style={{cursor: 'pointer', textAlign: 'center'}}>
+                  <img src={proj.capa} style={{width: '420px', height: '420px', objectFit: 'cover', borderRadius: '10px'}} />
+                  <p style={{fontSize: '12px', marginTop: '5px'}}>{proj.titulo}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* --- NÍVEL 2: GALERIA DO PROJETO (Abre ao clicar em um projeto específico) --- */}
+      {telaAtual === 'galeria_projeto' && projetoSelecionado && (
+        <div className="window-overlay">
+          <div className="mac-window" style={{width: '900px', height: '85vh'}}>
+            <div className="title-bar">
+              {/* O botão vermelho aqui volta para a GRADE de projetos, não para o desktop */}
+              <div className="dot red" onClick={() => setTelaAtual('grid_projetos')}></div>
+              <span style={{fontSize: '0.8rem', color: '#fff'}}>{projetoSelecionado.titulo}</span>
+            </div>
+            <div style={{padding: '30px', overflowY: 'auto', textAlign: 'center'}}>
+              <h2>{projetoSelecionado.titulo}</h2>
+              <p style={{color: '#ccc', marginBottom: '20px'}}>{projetoSelecionado.descricao}</p>
+              
+              <div style={{display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center'}}>
+                {projetoSelecionado.fotos.map((url, index) => (
+                  <img key={index} src={url} style={{width: '90%', borderRadius: '10px', boxShadow: '0 4px 10px rgba(0,0,0,0.3)'}} />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </div>
@@ -198,6 +518,10 @@ function App() {
       <path d="M1.5 1.5L6.5 6.5L1.5 11.5" stroke="#C7C7CC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   </div>
+
+  
+  
+
 </div>
 
 export default App;
