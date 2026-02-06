@@ -36,3 +36,7 @@ html, body {
 button, a {
   -webkit-tap-highlight-color: transparent;
 }
+body, html {
+  min-width: 1200px; /* Ou a largura total do seu design */
+  overflow-x: auto;  /* Permite que o usuário dê scroll para os lados se a tela for pequena */
+}

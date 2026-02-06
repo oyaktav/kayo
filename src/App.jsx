@@ -25,6 +25,7 @@ import eu from './assets/eu.png';
 import perfil from './assets/perfil.png';
 
 
+
 const meusProjetos = [
   {
     id: 1,
@@ -89,6 +90,7 @@ function App() {
   const fechar = () => { setTelaAtual('desktop'); setProjetoSelecionado(null); };
 
   return (
+  
     <div>
       {/* Botão Voltar */}
       {telaAtual !== 'desktop' && (
@@ -517,11 +519,13 @@ function App() {
     <svg width="8" height="13" viewBox="0 0 8 13" fill="none">
       <path d="M1.5 1.5L6.5 6.5L1.5 11.5" stroke="#C7C7CC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
+    </div>
   </div>
 
   
-  
 
-</div>
+
+
 
 export default App;
+
