@@ -155,7 +155,7 @@ function App() {
           </div>
 
           {/* Perfil */}
-          <div className="widget" style={{ top: '15%', right: '10%', width: '650px', height: '500px' }} onClick={() => irPara('bio')}>
+          <div className="widget" style={{ top: '15%', right: '0.5%', width: '650px', height: '500px' }} onClick={() => irPara('bio')}>
             <img src={imgMapa} alt="Mapa" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             <div style={{position:'absolute', bottom:10, left:10, background:'white', padding:'2px 8px', borderRadius:8, fontSize:'0.7rem', fontWeight:'bold'}}></div>
           </div>
@@ -168,8 +168,8 @@ function App() {
   style={{ 
     textDecoration: 'none',
     bottom: '35%', 
-    right: '5%', 
-    width: '550px', 
+    right: '0.000005%', 
+    width: '400px', 
     height: '500px', // Mudei para auto para o conteúdo caber
     padding: '30px', // Reduzi de 150px para 30px para o texto aparecer
     background: '#ffffff',
@@ -229,7 +229,7 @@ function App() {
   style={{ 
     position: 'absolute', 
     top: '10%', 
-    left: '60%', 
+    left: '67%', 
     transform: 'translate(-70%, -37%)', 
     textAlign: 'center', 
     cursor: 'pointer',
@@ -268,8 +268,8 @@ function App() {
 <div 
   style={{ 
     position: 'absolute', 
-    top: '70%', 
-    left: '4%', 
+    top: '73%', 
+    left: '0.005%', 
     transform: 'translate(40%, -70%)', 
     textAlign: 'center', 
     cursor: 'pointer' 
@@ -288,7 +288,7 @@ function App() {
   style={{ 
     position: 'absolute', 
     top: '4%', 
-    left: '62%', 
+    left: '69%', 
     transform: 'translate(20%, 20%)', // Ajustado para ficar abaixo do Instagram
     textAlign: 'center', 
     cursor: 'pointer' 
@@ -319,7 +319,7 @@ function App() {
 <div 
   onClick={() => setTelaAtual('bio')}
   style={{
-    position: 'absolute', top: '700px', left: '100px', // Ajuste a posição aqui
+    position: 'absolute', top: '750px', left: '1px', // Ajuste a posição aqui
     width: '750px', background: '#fff', borderRadius: '20px',height: '600px',
     boxShadow: '0 10px 25px rgba(0,0,0,0.2)', cursor: 'pointer',
     borderTop: '20px solid #e0e0e0', borderBottom: '20px solid #e0e0e0',
@@ -336,7 +336,7 @@ function App() {
 <div 
   onClick={() => window.open('https://www.instagram.com/kaynnzss/', '_blank')}
   style={{
-    position: 'absolute', top: '1325px', left: '700px', // Fica ao lado do outro
+    position: 'absolute', top: '1325px', left: '450px', // Fica ao lado do outro
     width: '700px', background: '#fff', borderRadius: '25px',height: '550px',
     boxShadow: '0 10px 25px rgba(0,0,0,0.2)', cursor: 'pointer',
     borderTop: '12px solid #e0e0e0', borderBottom: '12px solid #e0e0e0',
