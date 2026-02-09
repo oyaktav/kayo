@@ -40,7 +40,7 @@ body {
 /* Mantido idêntico à versão que você gostou */
 .home-stack-wrapper {
   position: absolute;
-  top: 0%; left: 29%; 
+  top: 10%; left: 10%; 
   width: 320px; 
   height: 500px; /* Altura grande para caber o espaçamento */
   perspective: 1000px;
@@ -49,8 +49,8 @@ body {
 
 .stack-card {
   position: absolute;
-  width: 100%;
-  height: 200px; 
+  width: 200%;
+  height: 350px; 
   background: white;
   border-radius: 12px;
   border: 1px solid #ccc;
@@ -76,8 +76,8 @@ body {
 /* --- NOVAS NOTIFICAÇÕES (ESTILO iPHONE) --- */
 .notifications-wrapper {
   position: absolute;
-  bottom: 3%; /* Fica no canto inferior esquerdo */
-  left: 35%;
+  bottom: 13%; /* Fica no canto inferior esquerdo */
+  left: 25%;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -108,7 +108,7 @@ body {
 .msg-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   align-items: center;
 }
 
@@ -116,7 +116,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.75rem;
+  font-size: 0.90rem;
   color: #333;
   text-transform: uppercase;
 }
@@ -137,13 +137,15 @@ body {
 
 .msg-sender {
   font-weight: 700;
-  font-size: 0.95rem;
-  margin-bottom: 4px;
+  font-size: 2rem;
+  
   color: #000;
+  width: 200%;
+  height:55px;
 }
 
 .msg-text {
-  font-size: 0.9rem;
+  font-size: 2rem;
   color: #111;
   line-height: 1.3;
 }

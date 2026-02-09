@@ -155,7 +155,7 @@ function App() {
           </div>
 
           {/* Perfil */}
-          <div className="widget" style={{ top: '15%', right: '30%', width: '325px', height: '230px' }} onClick={() => irPara('bio')}>
+          <div className="widget" style={{ top: '15%', right: '10%', width: '650px', height: '500px' }} onClick={() => irPara('bio')}>
             <img src={imgMapa} alt="Mapa" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             <div style={{position:'absolute', bottom:10, left:10, background:'white', padding:'2px 8px', borderRadius:8, fontSize:'0.7rem', fontWeight:'bold'}}></div>
           </div>
@@ -167,10 +167,10 @@ function App() {
   rel="noopener noreferrer"
   style={{ 
     textDecoration: 'none',
-    bottom: '30%', 
-    right: '29%', 
-    width: '480px', 
-    height: 'auto', // Mudei para auto para o conteúdo caber
+    bottom: '35%', 
+    right: '5%', 
+    width: '550px', 
+    height: '500px', // Mudei para auto para o conteúdo caber
     padding: '30px', // Reduzi de 150px para 30px para o texto aparecer
     background: '#ffffff',
     borderRadius: '25px',
@@ -182,7 +182,7 @@ function App() {
     transition: 'transform 0.2s',
     display: 'flex',
     flexDirection: 'column',
-    gap: '15px'
+    gap: '20px'
   }}
   onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
   onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
@@ -228,8 +228,8 @@ function App() {
 <div  
   style={{ 
     position: 'absolute', 
-    top: '28%', 
-    left: '50%', 
+    top: '10%', 
+    left: '60%', 
     transform: 'translate(-70%, -37%)', 
     textAlign: 'center', 
     cursor: 'pointer',
@@ -244,7 +244,7 @@ function App() {
     src={iconPasta} 
     alt="Spotify" 
     style={{ 
-      width: '100%', 
+      width: '160%', 
       height: 'auto', 
       display: 'block',
       marginBottom: '-25px' /* Removendo qualquer espaço extra da imagem */
@@ -252,7 +252,7 @@ function App() {
   />
   
   <p style={{ 
-    fontSize: '0.9rem', 
+    fontSize: '1.7rem', 
     fontWeight: 'bold', 
     color: '#000', 
     margin: 0,        /* Zera as margens padrão do navegador */
@@ -268,17 +268,17 @@ function App() {
 <div 
   style={{ 
     position: 'absolute', 
-    top: '79%', 
-    left: '49%', 
-    transform: 'translate(20%, -50%)', 
+    top: '70%', 
+    left: '4%', 
+    transform: 'translate(40%, -70%)', 
     textAlign: 'center', 
     cursor: 'pointer' 
   }} 
   onClick={() => window.open('https://www.instagram.com/kaynnzss/', '_blank')}
 >
-  <img src={iconInstagram} alt="Instagram" style={{ width: '130px' }} />
+  <img src={iconInstagram} alt="Instagram" style={{ width: '225px' }} />
   
-  <p style={{ fontSize: '0.9rem', fontWeight: 'bold', marginTop: '-25px', color: '#000000' }}>
+  <p style={{ fontSize: '1.7rem', fontWeight: 'bold', marginTop: '-29px', color: '#000000' }}>
    Instagram
   </p>
 </div>
@@ -287,8 +287,8 @@ function App() {
 <div 
   style={{ 
     position: 'absolute', 
-    top: '9%', 
-    left: '44%', 
+    top: '4%', 
+    left: '62%', 
     transform: 'translate(20%, 20%)', // Ajustado para ficar abaixo do Instagram
     textAlign: 'center', 
     cursor: 'pointer' 
@@ -299,13 +299,13 @@ function App() {
     src={iconPastaNova} 
     alt="Meus Projetos" 
     style={{ 
-      width: '125px', 
+      width: '195px', 
       display: 'block',
       mixBlendMode: 'multiply' // Remove o fundo branco se a imagem tiver
     }} 
   />
   <p style={{ 
-    fontSize: '0.9rem', 
+    fontSize: '1.7rem', 
     fontWeight: 'bold', 
     color: '#000', 
     marginTop: '-25px' 
@@ -319,8 +319,8 @@ function App() {
 <div 
   onClick={() => setTelaAtual('bio')}
   style={{
-    position: 'absolute', top: '505px', left: '470px', // Ajuste a posição aqui
-    width: '400px', background: '#fff', borderRadius: '20px',height: '250px',
+    position: 'absolute', top: '700px', left: '100px', // Ajuste a posição aqui
+    width: '750px', background: '#fff', borderRadius: '20px',height: '600px',
     boxShadow: '0 10px 25px rgba(0,0,0,0.2)', cursor: 'pointer',
     borderTop: '20px solid #e0e0e0', borderBottom: '20px solid #e0e0e0',
     overflow: 'hidden', textAlign: 'center', transition: 'transform 0.2s'
@@ -328,7 +328,7 @@ function App() {
   onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
   onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
 >
-  <img src={bio} style={{ width: '100%', height: '230px', objectFit: 'cover' }} alt="Bio Widget" />
+  <img src={bio} style={{ width: '100%', height: '500px', objectFit: 'cover' }} alt="Bio Widget" />
   <p style={{ fontSize: '12px', fontWeight: 'bold', margin: '5px 0', color: '#000' }}></p>
 </div>
 
@@ -336,8 +336,8 @@ function App() {
 <div 
   onClick={() => window.open('https://www.instagram.com/kaynnzss/', '_blank')}
   style={{
-    position: 'absolute', top: '650px', left: '1100px', // Fica ao lado do outro
-    width: '300px', background: '#fff', borderRadius: '25px',height: '250px',
+    position: 'absolute', top: '1325px', left: '700px', // Fica ao lado do outro
+    width: '700px', background: '#fff', borderRadius: '25px',height: '550px',
     boxShadow: '0 10px 25px rgba(0,0,0,0.2)', cursor: 'pointer',
     borderTop: '12px solid #e0e0e0', borderBottom: '12px solid #e0e0e0',
     overflow: 'hidden', textAlign: 'center', transition: 'transform 0.2s'
@@ -407,7 +407,7 @@ function App() {
         {/* WIDGETS DESLOCADOS PARA BAIXO */}
         {/* Foto 1 (Esquerda) */}
         <div style={{
-          position: 'absolute', bottom: '100px', left: '60px',
+          position: 'absolute', bottom: '100px', left: '70px',
           width: '280px', background: '#fff', borderRadius: '25px',
           boxShadow: '0 10px 30px rgba(0,0,0,0.15)', transform: 'rotate(-6deg)', zIndex: 3,
           borderTop: '15px solid #e0e0e0', borderBottom: '15px solid #e0e0e0',
