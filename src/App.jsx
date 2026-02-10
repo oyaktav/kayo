@@ -167,8 +167,8 @@ function App() {
   rel="noopener noreferrer"
   style={{ 
     textDecoration: 'none',
-    bottom: '15%', 
-    right: '-25%', 
+    bottom: '23%', 
+    right: '-20%', 
     width: '400px', 
     height: '500px', // Mudei para auto para o conteúdo caber
     padding: '30px', // Reduzi de 150px para 30px para o texto aparecer
@@ -268,7 +268,7 @@ function App() {
 <div 
   style={{ 
     position: 'absolute', 
-    top: '85%', 
+    top: '90%', 
     left: '-6%', 
     transform: 'translate(40%, -70%)', 
     textAlign: 'center', 
@@ -287,7 +287,7 @@ function App() {
 <div 
   style={{ 
     position: 'absolute', 
-    top: '2%', 
+    top: '1.5%', 
     left: '78%', 
     transform: 'translate(20%, 20%)', // Ajustado para ficar abaixo do Instagram
     textAlign: 'center', 
