@@ -268,7 +268,7 @@ function App() {
 <div 
   style={{ 
     position: 'absolute', 
-    top: '90%', 
+    top: '93%', 
     left: '-6%', 
     transform: 'translate(40%, -70%)', 
     textAlign: 'center', 
