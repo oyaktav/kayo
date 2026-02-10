@@ -345,7 +345,7 @@ function App() {
   onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
   onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
 >
-  <img src={perfil} style={{ width: '125%', height: '300px', objectFit: 'cover' }} alt="Insta Widget" />
+  <img src={perfil} style={{ width: '125%', height: '600px', objectFit: 'cover' }} alt="Insta Widget" />
   <p style={{ fontSize: '12px', fontWeight: 'bold', margin: '5px 0', color: '#000' }}>INSTAGRAM</p>
 </div>
 
