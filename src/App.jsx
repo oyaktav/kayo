@@ -155,7 +155,7 @@ function App() {
           </div>
 
           {/* Perfil */}
-          <div className="widget" style={{ top: '15%', right: '-15%', width: '650px', height: '500px' }} onClick={() => irPara('bio')}>
+          <div className="widget" style={{ top: '15%', right: '-20%', width: '650px', height: '500px' }} onClick={() => irPara('bio')}>
             <img src={imgMapa} alt="Mapa" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             <div style={{position:'absolute', bottom:10, left:10, background:'white', padding:'2px 8px', borderRadius:8, fontSize:'0.7rem', fontWeight:'bold'}}></div>
           </div>
@@ -167,8 +167,8 @@ function App() {
   rel="noopener noreferrer"
   style={{ 
     textDecoration: 'none',
-    bottom: '35%', 
-    right: '-3%', 
+    bottom: '15%', 
+    right: '-11%', 
     width: '400px', 
     height: '500px', // Mudei para auto para o conteúdo caber
     padding: '30px', // Reduzi de 150px para 30px para o texto aparecer
@@ -229,7 +229,7 @@ function App() {
   style={{ 
     position: 'absolute', 
     top: '8%', 
-    left: '67%', 
+    left: '75%', 
     transform: 'translate(-70%, -37%)', 
     textAlign: 'center', 
     cursor: 'pointer',
@@ -268,7 +268,7 @@ function App() {
 <div 
   style={{ 
     position: 'absolute', 
-    top: '90%', 
+    top: '100%', 
     left: '-5%', 
     transform: 'translate(40%, -70%)', 
     textAlign: 'center', 
@@ -288,7 +288,7 @@ function App() {
   style={{ 
     position: 'absolute', 
     top: '2.5%', 
-    left: '69%', 
+    left: '78%', 
     transform: 'translate(20%, 20%)', // Ajustado para ficar abaixo do Instagram
     textAlign: 'center', 
     cursor: 'pointer' 
