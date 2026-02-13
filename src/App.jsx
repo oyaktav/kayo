@@ -391,7 +391,7 @@ function App() {
       <div style={{ flex: 1, position: 'relative', width: '100%', height: '100%' }}>
         
         {/* TEXTO DE INTRODUÇÃO (Agora com mais espaço para crescer) */}
-        <div style={{ textAlign: 'center', padding: '20px 50px' }}>
+        <div style={{ textAlign: 'center', padding: '-0px 25px' }}>
           <p style={{ 
             fontSize: '1.2rem', 
             color: '#000', 
@@ -407,7 +407,7 @@ function App() {
         {/* WIDGETS DESLOCADOS PARA BAIXO */}
         {/* Foto 1 (Esquerda) */}
         <div style={{
-          position: 'absolute', bottom: '100px', left: '70px',
+          position: 'absolute', bottom: '0px', left: '70px',
           width: '280px', background: '#fff', borderRadius: '25px',
           boxShadow: '0 10px 30px rgba(0,0,0,0.15)', transform: 'rotate(-6deg)', zIndex: 3,
           borderTop: '15px solid #e0e0e0', borderBottom: '15px solid #e0e0e0',
@@ -418,7 +418,7 @@ function App() {
 
         {/* Foto 2 (Centro/Topo da pilha inferior) */}
         <div style={{
-          position: 'absolute', bottom: '60px', left: '310px',
+          position: 'absolute', bottom: '0px', left: '310px',
           width: '280px', background: '#fff', borderRadius: '25px',
           boxShadow: '0 15px 40px rgba(0,0,0,0.2)', transform: 'rotate(2deg)', zIndex: 5,
           borderTop: '15px solid #e0e0e0', borderBottom: '15px solid #e0e0e0',
@@ -429,7 +429,7 @@ function App() {
 
         {/* Foto 3 (Direita) */}
         <div style={{
-          position: 'absolute', bottom: '120px', left: '600px',
+          position: 'absolute', bottom: '0px', left: '600px',
           width: '280px', background: '#fff', borderRadius: '25px',
           boxShadow: '0 10px 30px rgba(0,0,0,0.15)', transform: 'rotate(-3deg)', zIndex: 4,
           borderTop: '30px solid #e0e0e0', borderBottom: '15px solid #e0e0e0',
