@@ -334,7 +334,7 @@ function App() {
 
 {/* --- WIDGET INDEPENDENTE: INSTAGRAM --- */}
 <div 
-  onClick={() => window.open('https://www.instagram.com/kaynnzss/', '_blank')}
+  onClick={() => window.open('https://www.instagram.com/modcarreira18/', '_blank')}
   style={{
     position: 'absolute', top: '1325px', left: '450px', // Fica ao lado do outro
     width: '700px', background: '#fff', borderRadius: '25px',height: '550px',
@@ -345,7 +345,7 @@ function App() {
   onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
   onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
 >
-  <img src={perfil} style={{ width: '125%', height: '600px', objectFit: 'cover' }} alt="Insta Widget" />
+  <img src={perfil} style={{ width: '100%', height: '540px', objectFit: 'cover' }} alt="Insta Widget" />
   <p style={{ fontSize: '12px', fontWeight: 'bold', margin: '5px 0', color: '#000' }}>INSTAGRAM</p>
 </div>
 
@@ -400,7 +400,7 @@ function App() {
             lineHeight: '1.8',
             textAlign: 'center' 
           }}>
-             Sou o Kayo, Diretor Criativo e Designer apaixonado por transformar conceitos abstratos em identidades visuais memoráveis. Com foco em streetwear e design minimalista, meu trabalho busca o equilíbrio perfeito entre estética e funcionalidade. Aqui você pode escrever um texto bem maior que ele caberá perfeitamente!
+             Kayo Taveira é um criativo de 18y  autodidata de goiás , nascido em goiânia onde atualmente cursa publicidade e propaganda. Desde novo desenvolveu o gosto por expor suas ideias através da arte e criar coisas do zero, o que resultou em uma ansia de tudo aquilo que pode aprender sobre arte e comuicação e na curiosidade de até onde seu sonho e aquilo que ama podem te levar  . Seu trabalho cruza design, arte, moda e identidade , guiado por uma sensibilidade criativa que move o potencial de tudo que vê. Um coringa diciplinar , Kayo flutua entre projetos de direção criativa ,arte ,design, marcas , artistas e produtos que buscam identidade e originalidade. Sua identidade nasce do choque entre refências de rua e da arte classica e comtemporanea ,unindo arte , moda e cultura urbana . Cada projeto é visto e trabalhado com e  como uma experiência , com  foco maximo aos detalhes, impacto visual e social e a construção de narrativas que se conectam com pessoas e grupos .  
           </p>
         </div>
 
