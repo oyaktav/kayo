@@ -24,6 +24,10 @@ import bio from './assets/imgMapa.png';
 import eu from './assets/eu.png';
 import perfil from './assets/perfil.png';
 
+import capaC from './assets/capaC.png';
+import fotoC1 from './assets/fotoC1.png';
+import fotoC2 from'./assets/fotoC2.png';
+import fotoC3 from'./assets/fotoC3.png';
 
 
 const meusProjetos = [
@@ -41,7 +45,15 @@ const meusProjetos = [
     capa: capaB, 
     fotos: [capaB, fotoB1, fotoB2, fotoB3], 
     descricao: "Logo e identidade visual da marca."
-  }
+  },
+    {
+    id: 3,
+    titulo: "Camping Turvo",
+    capa: capaC, 
+    fotos: [capaC, fotoC1, fotoC2, fotoC3], 
+    descricao: "Logo e identidade visual da marca."
+  },
+  
 ];
   // Adicione mais projetos aqui se quiser
 
@@ -57,8 +69,8 @@ function App() {
     { 
       id: 1, 
       img: imgProjeto1,
-      titulo: "Artesana Cromicas", 
-      url: "artesanacromicas.com/projeto", 
+      titulo: "Camping Turvo", 
+      url: "campingturvo.com/projeto", 
       top: '30px',      // Fundo
       scale: 1, 
       z: 1
@@ -155,7 +167,7 @@ function App() {
           </div>
 
           {/* Perfil */}
-          <div className="widget" style={{ top: '15%', right: '-20%', width: '650px', height: '500px' }} onClick={() => irPara('bio')}>
+          <div className="widget" style={{ top: '15%', right: '0%', width: '650px', height: '500px' }} onClick={() => irPara('bio')}>
             <img src={imgMapa} alt="Mapa" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             <div style={{position:'absolute', bottom:10, left:10, background:'white', padding:'2px 8px', borderRadius:8, fontSize:'0.7rem', fontWeight:'bold'}}></div>
           </div>
@@ -167,8 +179,8 @@ function App() {
   rel="noopener noreferrer"
   style={{ 
     textDecoration: 'none',
-    bottom: '23%', 
-    right: '-20%', 
+    bottom: '200px', 
+    right: '10px', 
     width: '400px', 
     height: '500px', // Mudei para auto para o conteúdo caber
     padding: '30px', // Reduzi de 150px para 30px para o texto aparecer
@@ -319,8 +331,8 @@ function App() {
 <div 
   onClick={() => setTelaAtual('bio')}
   style={{
-    position: 'absolute', top: '750px', left: '-4px', // Ajuste a posição aqui
-    width: '750px', background: '#fff', borderRadius: '20px',height: '600px',
+    position: 'absolute', top: '600px', left: '1200px', // Ajuste a posição aqui
+    width: '500px', background: '#fff', borderRadius: '20px',height: '400px',
     boxShadow: '0 10px 25px rgba(0,0,0,0.2)', cursor: 'pointer',
     borderTop: '20px solid #e0e0e0', borderBottom: '20px solid #e0e0e0',
     overflow: 'hidden', textAlign: 'center', transition: 'transform 0.2s'
@@ -336,7 +348,7 @@ function App() {
 <div 
   onClick={() => window.open('https://www.instagram.com/modcarreira18/', '_blank')}
   style={{
-    position: 'absolute', top: '1325px', left: '450px', // Fica ao lado do outro
+    position: 'absolute', top: '1000px', left: '450px', // Fica ao lado do outro
     width: '700px', background: '#fff', borderRadius: '25px',height: '550px',
     boxShadow: '0 10px 25px rgba(0,0,0,0.2)', cursor: 'pointer',
     borderTop: '12px solid #e0e0e0', borderBottom: '12px solid #e0e0e0',

@@ -40,7 +40,7 @@ body {
 /* Mantido idêntico à versão que você gostou */
 .home-stack-wrapper {
   position: absolute;
-  top: 10%; left: -3%; 
+  top: -2%; left: -3%; 
   width: 320px; 
   height: 500px; /* Altura grande para caber o espaçamento */
   perspective: 1000px;
