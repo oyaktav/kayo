@@ -21,22 +21,3 @@ html, body {
   background-color: #fbfbfb; /* Mesma cor do fundo do App.css */
 }
 
-/* IMPORTANTE: O Vite centraliza o #root por padrão. 
-   Isso aqui remove a centralização para o nosso desktop funcionar. */
-#root {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: left; /* Remove alinhamento centralizado de texto */
-  display: block;   /* Remove o flexbox centralizador padrão */
-}
-
-/* Remove a borda azul de clique em botões no mobile */
-button, a {
-  -webkit-tap-highlight-color: transparent;
-}
-body, html {
-  min-width: 1200px; /* Ou a largura total do seu design */
-  overflow-x: auto;  /* Permite que o usuário dê scroll para os lados se a tela for pequena */
-}
