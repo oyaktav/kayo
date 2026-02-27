@@ -20,13 +20,15 @@ import fotoA5 from'./assets/fotoA5.png';
 import fotoA6 from'./assets/fotoA6.png';
 
 
+
 import capaB from './assets/capaB.png';
-import fotoB1 from './assets/fotoB1.png';
+import fotoB1 from './assets/fotoB7.png';
 import fotoB2 from'./assets/fotoB2.png';
 import fotoB3 from'./assets/fotoB3.png';
 import fotoB4 from './assets/fotoB4.png';
 import fotoB5 from'./assets/fotoB5.png';
 import fotoB6 from'./assets/fotoB6.png';
+import fotoB7 from'./assets/fotoB1.png';
 
 
 
@@ -58,14 +60,14 @@ const meusProjetos = [
     capa: capaA, 
     // Usamos o nome 'fotos' para bater com o .map que você já tem
     fotos: [capaA, fotoA1, fotoA2, fotoA3, fotoA4, fotoA5, fotoA6], 
-    descricao: "Identidade visual e direção criativada da marca."
+    descricao: "Identidade visual e direção criativa  da marca."
   },
   {
     id: 2,
     titulo: "Ferrari Auto Center",
     capa: capaB, 
-    fotos: [capaB, fotoB1, fotoB2, fotoB3, fotoB4, fotoB5, fotoB6], 
-    descricao: "Logo e identidade visual da marca."
+    fotos: [capaB, fotoB1, fotoB2, fotoB3, fotoB4, fotoB5, fotoB6, fotoB7], 
+    descricao: "Logo , identidade visual da marca e site administrativo responsivo"
   },
     {
     id: 2,
@@ -80,7 +82,7 @@ const meusProjetos = [
     titulo: "Camping Turvo",
     capa: capaC, 
     fotos: [capaC, fotoC1, fotoC2, fotoC3, fotoC4, fotoC5, fotoC6], 
-    descricao: "Logo e identidade visual da marca."
+    descricao: "Logo , identidade visual da marca e posts."
   },
     {
     id: 4,
@@ -124,7 +126,7 @@ function App() {
       id: 3, 
       img: imgProjeto3, 
       titulo: "Sicliko", 
-      url: "sicliko.com/projeto", 
+      url: "siclikostation.com/projeto", 
       top: '330px',    // Distância para ver a foto do meio
       scale: 1, 
       z: 3 
