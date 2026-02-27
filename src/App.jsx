@@ -11,23 +11,44 @@ import iconPasta from './assets/icon.png';
 import iconInstagram from './assets/icon-ig.png';
 import iconPastaNova from './assets/pasta.png';
 // Importe as fotos que você quer usar (use os nomes reais dos arquivos na sua pasta assets)
-import capaA from './assets/capaA.png';
+import capaA from './assets/fotoA3.png';
 import fotoA1 from './assets/fotoA1.png';
 import fotoA2 from'./assets/fotoA2.png';
 import fotoA3 from'./assets/fotoA3.png';
+import fotoA4 from './assets/fotoA4.png';
+import fotoA5 from'./assets/fotoA5.png';
+import fotoA6 from'./assets/fotoA6.png';
+
 
 import capaB from './assets/capaB.png';
 import fotoB1 from './assets/fotoB1.png';
 import fotoB2 from'./assets/fotoB2.png';
 import fotoB3 from'./assets/fotoB3.png';
+import fotoB4 from './assets/fotoB4.png';
+import fotoB5 from'./assets/fotoB5.png';
+import fotoB6 from'./assets/fotoB6.png';
+
+
+
 import bio from './assets/imgMapa.png';
 import eu from './assets/eu.png';
 import perfil from './assets/perfil.png';
 
-import capaC from './assets/capaC.png';
+import capaC from './assets/fotoC1.png';
 import fotoC1 from './assets/fotoC1.png';
 import fotoC2 from'./assets/fotoC2.png';
 import fotoC3 from'./assets/fotoC3.png';
+import fotoC4 from './assets/fotoC4.png';
+import fotoC5 from'./assets/fotoC5.png';
+import fotoC6 from'./assets/fotoC6.png';
+
+import capaD from './assets/fotoD2.png';
+import fotoD1 from './assets/fotoD1.png';
+import fotoD2 from'./assets/fotoD2.png';
+import fotoD3 from'./assets/fotoD3.png';
+import fotoD4 from './assets/fotoD4.png';
+
+
 
 
 const meusProjetos = [
@@ -36,22 +57,37 @@ const meusProjetos = [
     titulo: "Sicliko",
     capa: capaA, 
     // Usamos o nome 'fotos' para bater com o .map que você já tem
-    fotos: [capaA, fotoA1, fotoA2, fotoA3], 
+    fotos: [capaA, fotoA1, fotoA2, fotoA3, fotoA4, fotoA5, fotoA6], 
     descricao: "Identidade visual e direção criativada da marca."
   },
   {
     id: 2,
     titulo: "Ferrari Auto Center",
     capa: capaB, 
-    fotos: [capaB, fotoB1, fotoB2, fotoB3], 
+    fotos: [capaB, fotoB1, fotoB2, fotoB3, fotoB4, fotoB5, fotoB6], 
     descricao: "Logo e identidade visual da marca."
   },
+    {
+    id: 2,
+    titulo: "Ferrari Auto Center",
+    capa: capaB, 
+    fotos: [capaB, fotoB1, fotoB2, fotoB3, fotoB4, fotoB5, fotoB6], 
+    descricao: "Logo e identidade visual da marca."
+  },
+    
     {
     id: 3,
     titulo: "Camping Turvo",
     capa: capaC, 
-    fotos: [capaC, fotoC1, fotoC2, fotoC3], 
+    fotos: [capaC, fotoC1, fotoC2, fotoC3, fotoC4, fotoC5, fotoC6], 
     descricao: "Logo e identidade visual da marca."
+  },
+    {
+    id: 4,
+    titulo: "3% of Virgil in Slawnm",
+    capa: capaD, 
+    fotos: [capaD, fotoD1, fotoD2, fotoD3, fotoD4], 
+    descricao: "Releitura da arte de Slawn em mouse pad."
   },
   
 ];
@@ -77,9 +113,9 @@ function App() {
     },
     { 
       id: 2, 
-      img: imgProjeto2, 
-      titulo: "Ferrari Auto Center", 
-      url: "ferrariautocenter.com/projeto", 
+      img: fotoD2, 
+      titulo: "3%of Virgil in Slkawn", 
+      url: "3%ofvirgil.com/projeto", 
       top: '150px',     // Distância para ver a foto de trás
       scale: 1, 
       z: 2
@@ -180,7 +216,7 @@ function App() {
   style={{ 
     textDecoration: 'none',
     bottom: '23%', 
-    right: '3%', 
+    right: '2%', 
     width: '400px', 
     height: '500px', // Mudei para auto para o conteúdo caber
     padding: '30px', // Reduzi de 150px para 30px para o texto aparecer
