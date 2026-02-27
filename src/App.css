@@ -40,7 +40,7 @@ body {
 /* Mantido idêntico à versão que você gostou */
 .home-stack-wrapper {
   position: absolute;
-  top: -2%; left: -3%; 
+  top: 10%; left: -3%; 
   width: 320px; 
   height: 500px; /* Altura grande para caber o espaçamento */
   perspective: 1000px;
@@ -345,4 +345,29 @@ body {
   position: relative;
   transform-origin: top left; /* Garante que encolha a partir do canto superior */
   transition: transform 0.2s ease;
+}
+
+/* Quando a tela for de Celular (até 768px) */
+@media (max-width: 768px) {
+  .main-wrapper {
+    /* O zoom é a forma mais fácil de encolher tudo proporcionalmente */
+    /* Se o zoom não funcionar no seu navegador, o scale resolve */
+    transform: scale(0.45); 
+    width: 200%; /* Compensa o encolhimento para não sobrar espaço branco */
+  }
+}
+
+/* Quando for Tablet (entre 769px e 1100px) */
+@media (min-width: 769px) and (max-width: 1100px) {
+  .main-wrapper {
+    transform: scale(0.7);
+    width: 140%;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    zoom: 45%; /* Isso encolhe TUDO no mobile sem quebrar as posições */
+    -moz-transform: scale(0.45); /* Para o Firefox */
+    -moz-transform-origin: 0 0;
+  }
 }
