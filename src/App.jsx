@@ -180,7 +180,7 @@ function App() {
   style={{ 
     textDecoration: 'none',
     bottom: '23%', 
-    right: '15%', 
+    right: '12%', 
     width: '400px', 
     height: '500px', // Mudei para auto para o conteúdo caber
     padding: '30px', // Reduzi de 150px para 30px para o texto aparecer
@@ -299,7 +299,7 @@ Instagram
 <div 
   style={{ 
     position: 'absolute', 
-    top: '70%', 
+    top: '80%', 
     left: '0%', 
     transform: 'translate(20%, 20%)', // Ajustado para ficar abaixo do Instagram
     textAlign: 'center', 
