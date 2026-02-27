@@ -180,7 +180,7 @@ function App() {
   style={{ 
     textDecoration: 'none',
     bottom: '23%', 
-    right: '12%', 
+    right: '6%', 
     width: '400px', 
     height: '500px', // Mudei para auto para o conteúdo caber
     padding: '30px', // Reduzi de 150px para 30px para o texto aparecer
