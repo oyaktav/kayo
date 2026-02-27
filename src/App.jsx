@@ -180,7 +180,7 @@ function App() {
   style={{ 
     textDecoration: 'none',
     bottom: '23%', 
-    right: '0%', 
+    right: '15%', 
     width: '400px', 
     height: '500px', // Mudei para auto para o conteúdo caber
     padding: '30px', // Reduzi de 150px para 30px para o texto aparecer
@@ -236,7 +236,7 @@ function App() {
   </div>
 
 </a>
-       {/* Spotify - Bloco Corrigido e Simplificado */}
+       {/* ig - Bloco Corrigido e Simplificado */}
 <div  
   style={{ 
     position: 'absolute', 
@@ -250,10 +250,10 @@ function App() {
     flexDirection: 'column',
     alignItems: 'center'
   }} 
-  onClick={() => window.open('https://open.spotify.com/playlist/6ASgnmFPmRRJ8Pb6Y9cuUX', '_blank')}
+  onClick={() => window.open('https://www.instagram.com/modcarreira18/', '_blank')}
 >
   <img 
-    src={iconPasta} 
+    src={iconInstagram} 
     alt="Spotify" 
     style={{ 
       width: '160%', 
@@ -272,26 +272,26 @@ function App() {
     width: '100%',
     textAlign: 'center'
   }}>
-    Spotify
+Instagram
   </p>
 </div>
      
-{/*Instagram */}
+{/*behence*/}
 <div 
   style={{ 
     position: 'absolute', 
-    top: '85%', 
-    left: '-6%', 
-    transform: 'translate(40%, -70%)', 
+    top: '12%', 
+    left: '71%', 
+    transform: 'translate(61%, -70%)', 
     textAlign: 'center', 
     cursor: 'pointer' 
   }} 
-  onClick={() => window.open('https://www.instagram.com/kaynnzss/', '_blank')}
+  onClick={() => window.open('https://www.behance.net/ccalidadi', '_blank')}
 >
-  <img src={iconInstagram} alt="Instagram" style={{ width: '225px' }} />
+  <img src={iconPasta} alt="Instagram" style={{ width: '170px' }} />
   
-  <p style={{ fontSize: '1.7rem', fontWeight: 'bold', marginTop: '-29px', color: '#000000' }}>
-   Instagram
+  <p style={{ fontSize: '1.7rem', fontWeight: 'bold', marginTop: '-8px', color: '#000000' }}>
+   Behance
   </p>
 </div>
 
@@ -299,8 +299,8 @@ function App() {
 <div 
   style={{ 
     position: 'absolute', 
-    top: '1.5%', 
-    left: '78%', 
+    top: '70%', 
+    left: '0%', 
     transform: 'translate(20%, 20%)', // Ajustado para ficar abaixo do Instagram
     textAlign: 'center', 
     cursor: 'pointer' 
@@ -331,7 +331,7 @@ function App() {
 <div 
   onClick={() => setTelaAtual('bio')}
   style={{
-    position: 'absolute', top: '700px', left: '-4px', // Ajuste a posição aqui
+    position: 'absolute', top: '700px', left: '-200px', // Ajuste a posição aqui
     width: '750px', background: '#fff', borderRadius: '20px',height: '600px',
     boxShadow: '0 10px 25px rgba(0,0,0,0.2)', cursor: 'pointer',
     borderTop: '20px solid #e0e0e0', borderBottom: '20px solid #e0e0e0',
@@ -348,7 +348,7 @@ function App() {
 <div 
   onClick={() => window.open('https://www.instagram.com/modcarreira18/', '_blank')}
   style={{
-    position: 'absolute', top: '1200px', left: '450px', // Fica ao lado do outro
+    position: 'absolute', top: '1100px', left: '450px', // Fica ao lado do outro
     width: '700px', background: '#fff', borderRadius: '25px',height: '550px',
     boxShadow: '0 10px 25px rgba(0,0,0,0.2)', cursor: 'pointer',
     borderTop: '12px solid #e0e0e0', borderBottom: '12px solid #e0e0e0',
