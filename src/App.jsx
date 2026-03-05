@@ -50,17 +50,69 @@ import fotoD2 from'./assets/fotoD2.png';
 import fotoD3 from'./assets/fotoD3.png';
 import fotoD4 from './assets/fotoD4.png';
 
+import capaE from './assets/fotoE1.png';
+import fotoE1 from './assets/fotoE1.png';
+import fotoE2 from './assets/fotoE2.png';
+
+import capaF from './assets/fotoF1.png';
+
+
+import capaG from './assets/fotoG3.png';
+import fotoG1 from './assets/capaG.png';
+import fotoG2 from './assets/fotoG1.png';
+import fotoG3 from './assets/fotoG3.png';
+import fotoG4 from './assets/fotoG4.png';
+
+import capaH from './assets/capaH.png';
+import fotoH1 from './assets/fotoH1.png';
+import fotoH2 from'./assets/fotoH2.png';
+import fotoH3 from'./assets/fotoH3.png';
+import fotoH4 from './assets/fotoH4.png';
+import fotoH5 from'./assets/fotoH5.png';
+import fotoH6 from'./assets/fotoH6.png';
+
+
 
 
 
 const meusProjetos = [
-  {
+   {
+     id: 8,
+    titulo: "logofolio",
+    capa: capaH, 
+    fotos: [capaH,fotoC6,capaF,fotoH1, fotoH2, fotoH3, fotoH4, fotoH5, fotoH6], 
+    descricao: "Portiflio de logos "
+  
+    },
+        {
+    id: 5,
+    titulo: "Capa \"Chorei Sozinho\"",
+    capa: capaE, 
+    fotos: [capaE, fotoE2], 
+    descricao: "Direção criativa e Direção de arte da capa do single \"Chorei Sozinho\" "
+  },
+     {
+     id: 7,
+    titulo: "Colagens digitais anacrônicas",
+    capa: capaG, 
+    fotos: [capaG, fotoG1, fotoG2, fotoG3,fotoG4], 
+    descricao: "Projetos de colagens digitais anacrônicas afim de estudo."
+  
+    },
+      {
     id: 1,
     titulo: "Sicliko",
     capa: capaA, 
     // Usamos o nome 'fotos' para bater com o .map que você já tem
     fotos: [capaA, fotoA1, fotoA2, fotoA3, fotoA4, fotoA5, fotoA6], 
     descricao: "Identidade visual e direção criativa  da marca."
+  },
+      {
+    id: 4,
+    titulo: "3% of Virgil in Slawnm",
+    capa: capaD, 
+    fotos: [capaD, fotoD1, fotoD2, fotoD3, fotoD4], 
+    descricao: "Releitura da arte de Slawn em mouse pad."
   },
   {
     id: 2,
@@ -69,29 +121,15 @@ const meusProjetos = [
     fotos: [capaB, fotoB1, fotoB2, fotoB3, fotoB4, fotoB5, fotoB6, fotoB7], 
     descricao: "Logo , identidade visual da marca e site administrativo responsivo"
   },
-    {
-    id: 2,
-    titulo: "Ferrari Auto Center",
-    capa: capaB, 
-    fotos: [capaB, fotoB1, fotoB2, fotoB3, fotoB4, fotoB5, fotoB6], 
-    descricao: "Logo e identidade visual da marca."
-  },
-    
+  
     {
     id: 3,
     titulo: "Camping Turvo",
     capa: capaC, 
-    fotos: [capaC, fotoC1, fotoC2, fotoC3, fotoC4, fotoC5, fotoC6], 
+    fotos: [capaC, fotoC2, fotoC3, fotoC4, fotoC5, fotoC6], 
     descricao: "Logo , identidade visual da marca e posts."
   },
-    {
-    id: 4,
-    titulo: "3% of Virgil in Slawnm",
-    capa: capaD, 
-    fotos: [capaD, fotoD1, fotoD2, fotoD3, fotoD4], 
-    descricao: "Releitura da arte de Slawn em mouse pad."
-  },
-  
+
 ];
   // Adicione mais projetos aqui se quiser
 
@@ -106,7 +144,7 @@ function App() {
   const abasProjetos = [
     { 
       id: 1, 
-      img: imgProjeto1,
+      img: capaD,
       titulo: "Camping Turvo", 
       url: "campingturvo.com/projeto", 
       top: '30px',      // Fundo
@@ -115,7 +153,7 @@ function App() {
     },
     { 
       id: 2, 
-      img: fotoD2, 
+      img: fotoG3, 
       titulo: "3%of Virgil in Slkawn", 
       url: "3%ofvirgil.com/projeto", 
       top: '150px',     // Distância para ver a foto de trás
@@ -124,7 +162,7 @@ function App() {
     },
     { 
       id: 3, 
-      img: imgProjeto3, 
+      img: fotoE1, 
       titulo: "Sicliko", 
       url: "siclikostation.com/projeto", 
       top: '330px',    // Distância para ver a foto do meio
@@ -506,25 +544,42 @@ Instagram
         </div>
       )}
 
-      {/* --- NÍVEL 1: GRADE DE PROJETOS (Abre ao clicar na pasta.png) --- */}
-      {telaAtual === 'grid_projetos' && (
-        <div className="window-overlay">
-          <div className="mac-window" style={{width: '900px', height: '900px'}}>
-            <div className="title-bar">
-              <div className="dot red" onClick={() => setTelaAtual('desktop')}></div>
-              <span style={{fontSize: '0.8rem', color: '#fff'}}></span>
-            </div>
-            <div style={{padding: '20px', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px'}}>
-              {meusProjetos.map(proj => (
-                <div key={proj.id} onClick={() => { setProjetoSelecionado(proj); setTelaAtual('galeria_projeto'); }} style={{cursor: 'pointer', textAlign: 'center'}}>
-                  <img src={proj.capa} style={{width: '420px', height: '420px', objectFit: 'cover', borderRadius: '10px'}} />
-                  <p style={{fontSize: '12px', marginTop: '5px'}}>{proj.titulo}</p>
-                </div>
-              ))}
-            </div>
+    {/* --- NÍVEL 1: GRADE DE PROJETOS --- */}
+{telaAtual === 'grid_projetos' && (
+  <div className="window-overlay">
+    {/* Adicionei flex e flex-col para separar a barra de título do conteúdo */}
+    <div className="mac-window" style={{ width: '900px', height: '80vh', display: 'flex', flexDirection: 'column' }}>
+      
+      <div className="title-bar">
+        <div className="dot red" onClick={() => setTelaAtual('desktop')}></div>
+        <span style={{ fontSize: '0.8rem', color: '#fff' }}>Meus Projetos</span>
+      </div>
+
+      {/* ESTA DIV ABAIXO É A CHAVE: 
+          - overflowY: 'auto' permite o scroll
+          - flex: 1 faz ela ocupar todo o resto da janela
+      */}
+      <div style={{ 
+        padding: '20px', 
+        display: 'grid', 
+        gridTemplateColumns: 'repeat(3, 1fr)', 
+        gap: '20px', 
+        overflowY: 'auto', 
+        flex: 1 
+      }} className="custom-scrollbar">
+        
+        {meusProjetos.map(proj => (
+          <div key={proj.id} onClick={() => { setProjetoSelecionado(proj); setTelaAtual('galeria_projeto'); }} style={{ cursor: 'pointer', textAlign: 'center' }}>
+            {/* Ajustei o width para 100% para ele respeitar a grade de 3 colunas */}
+            <img src={proj.capa} style={{ width: '100%', aspectRatio: '1/1', objectFit: 'cover', borderRadius: '10px' }} />
+            <p style={{ fontSize: '12px', marginTop: '5px', color: '#fff' }}>{proj.titulo}</p>
           </div>
-        </div>
-      )}
+        ))}
+
+      </div>
+    </div>
+  </div>
+)}
 
       {/* --- NÍVEL 2: GALERIA DO PROJETO (Abre ao clicar em um projeto específico) --- */}
       {telaAtual === 'galeria_projeto' && projetoSelecionado && (
