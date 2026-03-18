@@ -21,7 +21,12 @@ import fotoA6 from'./assets/fotoA6.png';
 
 
 
-import capaB from './assets/capaB.png';
+import capaB from './assets/capaferrari.png';
+import estoque from './assets/estoque.png';
+import oss from './assets/oss.png';
+import func1 from './assets/func1.png';
+import func2 from './assets/func2.png';
+import fotoB0 from './assets/capaB.png';
 import fotoB1 from './assets/fotoB7.png';
 import fotoB2 from'./assets/fotoB2.png';
 import fotoB3 from'./assets/fotoB3.png';
@@ -53,6 +58,7 @@ import fotoD4 from './assets/fotoD4.png';
 import capaE from './assets/fotoE1.png';
 import fotoE1 from './assets/fotoE1.png';
 import fotoE2 from './assets/fotoE2.png';
+import fotoE3 from './assets/fotoE3.png';
 
 import capaF from './assets/fotoF1.png';
 
@@ -71,8 +77,15 @@ import fotoH4 from './assets/fotoH4.png';
 import fotoH5 from'./assets/fotoH5.png';
 import fotoH6 from'./assets/fotoH6.png';
 
+import capaI from './assets/capaI.png';
+import fotoI1 from './assets/fotoI1.png';
+import fotoI2 from'./assets/fotoI2.png';
+import fotoI3 from'./assets/fotoI3.png';
+import fotoI4 from './assets/fotoI4.png';
+import fotoI5 from'./assets/fotoI5.png';
 
-
+import conce from'./assets/conce.png';
+import concep from'./assets/concep.png';
 
 
 const meusProjetos = [
@@ -88,18 +101,55 @@ const meusProjetos = [
     id: 5,
     titulo: "Capa \"Chorei Sozinho\"",
     capa: capaE, 
-    fotos: [capaE, fotoE2], 
+    fotos: [capaE, fotoE2,fotoE3], 
     descricao: "Direção criativa e Direção de arte da capa do single \"Chorei Sozinho\" "
   },
+  
+    {
+    id: 5,
+    titulo: "KK.Illustration",
+    capa: bio, 
+    fotos: [bio], 
+    descricao: "Releitura capa do album MM.FOOD de MF DOOM verção propria  ."
+  },
+    {
+    id: 6,
+    titulo: "Nail Studio Milla Silva",
+    capa: capaI, 
+    fotos: [capaI, fotoI1, fotoI2, fotoI3, fotoI4, fotoI5], 
+    descricao: "Site e identidade visual ."
+  },
+    {
+    id: 3,
+    titulo: "Ferrari Auto Center",
+    capa: capaB, 
+    fotos: [capaB,estoque, oss,fotoB1,func1,func2, fotoB0, fotoB2, fotoB3, fotoB4, fotoB5, fotoB6, fotoB7], 
+    descricao: "Logo , identidade visual da marca e site administrativo responsivo"
+  },
+    {
+    id: 4,
+    titulo: "Camping Turvo",
+    capa: fotoC2, 
+    fotos: [fotoC2, fotoC2, fotoC3, fotoC4, fotoC5, fotoC6], 
+    descricao: "Logo , identidade visual da marca e posts."
+  },
+  
      {
      id: 7,
     titulo: "Colagens digitais anacrônicas",
     capa: capaG, 
-    fotos: [capaG, fotoG1, fotoG2, fotoG3,fotoG4], 
+    fotos: [capaG,concep, fotoG1, fotoG2, fotoG3,fotoG4], 
     descricao: "Projetos de colagens digitais anacrônicas afim de estudo."
   
     },
       {
+    id: 2,
+    titulo: "3% of Virgil in Slawnm",
+    capa: capaD, 
+    fotos: [capaD,conce, fotoD1, fotoD2, fotoD3, fotoD4], 
+    descricao: "Releitura da arte de Slawn em mouse pad."
+  },
+   {
     id: 1,
     titulo: "Sicliko",
     capa: capaA, 
@@ -107,28 +157,11 @@ const meusProjetos = [
     fotos: [capaA, fotoA1, fotoA2, fotoA3, fotoA4, fotoA5, fotoA6], 
     descricao: "Identidade visual e direção criativa  da marca."
   },
-      {
-    id: 4,
-    titulo: "3% of Virgil in Slawnm",
-    capa: capaD, 
-    fotos: [capaD, fotoD1, fotoD2, fotoD3, fotoD4], 
-    descricao: "Releitura da arte de Slawn em mouse pad."
-  },
-  {
-    id: 2,
-    titulo: "Ferrari Auto Center",
-    capa: capaB, 
-    fotos: [capaB, fotoB1, fotoB2, fotoB3, fotoB4, fotoB5, fotoB6, fotoB7], 
-    descricao: "Logo , identidade visual da marca e site administrativo responsivo"
-  },
+   
+
   
-    {
-    id: 3,
-    titulo: "Camping Turvo",
-    capa: capaC, 
-    fotos: [capaC, fotoC2, fotoC3, fotoC4, fotoC5, fotoC6], 
-    descricao: "Logo , identidade visual da marca e posts."
-  },
+  
+  
 
 ];
   // Adicione mais projetos aqui se quiser
@@ -416,7 +449,7 @@ Instagram
   onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
   onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
 >
-  <img src={bio} style={{ width: '100%', height: '500px', objectFit: 'cover' }} alt="Bio Widget" />
+  <img src={bio} style={{ width: '100%', height: '562px', objectFit: 'cover' }} alt="Bio Widget" />
   <p style={{ fontSize: '12px', fontWeight: 'bold', margin: '5px 0', color: '#000' }}></p>
 </div>
 
