@@ -129,8 +129,8 @@ const meusProjetos = [
     {
     id: 4,
     titulo: "Camping Turvo",
-    capa: fotoC2, 
-    fotos: [fotoC2, fotoC2, fotoC3, fotoC4, fotoC5, fotoC6], 
+    capa: fotoC3, 
+    fotos: [fotoC2, fotoC1, fotoC3, fotoC4, fotoC5, fotoC6], 
     descricao: "Logo , identidade visual da marca e posts."
   },
   
