@@ -87,6 +87,8 @@ import fotoI5 from'./assets/fotoI5.png';
 import conce from'./assets/conce.png';
 import concep from'./assets/concep.png';
 
+import fotoJ1 from'./assets/fotoJ1.png';
+
 
 const meusProjetos = [
    {
@@ -126,8 +128,15 @@ const meusProjetos = [
     fotos: [capaB,estoque, oss,fotoB1,func1,func2, fotoB0, fotoB2, fotoB3, fotoB4, fotoB5, fotoB6, fotoB7], 
     descricao: "Logo , identidade visual da marca e site administrativo responsivo"
   },
-    {
+   {
     id: 4,
+    titulo: "KM CAR",
+    capa: fotoJ1, 
+    fotos: [fotoJ1], 
+    descricao: "Logo , identidade visual da marca "
+  },
+    {
+    id: 5,
     titulo: "Camping Turvo",
     capa: fotoC3, 
     fotos: [fotoC2, fotoC1, fotoC3, fotoC4, fotoC5, fotoC6], 
