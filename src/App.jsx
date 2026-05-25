@@ -4,9 +4,7 @@ import './App.css';
 /* --- SUAS IMAGENS --- */
 import fotoPerfil from './assets/img1.png';
 import imgMapa from './assets/img2.png';
-import imgProjeto1 from './assets/arte.png';
-import imgProjeto2 from './assets/ferrari.png';
-import imgProjeto3 from './assets/sicliko.png'; 
+
 import iconPasta from './assets/icon.png';
 import iconInstagram from './assets/icon-ig.png';
 import iconPastaNova from './assets/pasta.png';
@@ -21,27 +19,21 @@ import fotoA6 from'./assets/fotoA6.png';
 
 
 
-import capaB from './assets/capaferrari.png';
+
 import estoque from './assets/estoque.png';
 import oss from './assets/oss.png';
 import func1 from './assets/func1.png';
 import func2 from './assets/func2.png';
-import fotoB0 from './assets/capaB.png';
-import fotoB1 from './assets/fotoB7.png';
-import fotoB2 from'./assets/fotoB2.png';
-import fotoB3 from'./assets/fotoB3.png';
-import fotoB4 from './assets/fotoB4.png';
-import fotoB5 from'./assets/fotoB5.png';
-import fotoB6 from'./assets/fotoB6.png';
-import fotoB7 from'./assets/fotoB1.png';
-
-
+import capaB from './assets/capaB.png';
+import painefinan from './assets/painefinan.png';
+import card from './assets/card.png';
+import app from './assets/app.png';
+import logo from './assets/logo.mp4';
 
 import bio from './assets/imgMapa.png';
 import eu from './assets/eu.png';
 import perfil from './assets/perfil.png';
 
-import capaC from './assets/fotoC1.png';
 import fotoC1 from './assets/fotoC1.png';
 import fotoC2 from'./assets/fotoC2.png';
 import fotoC3 from'./assets/fotoC3.png';
@@ -87,20 +79,28 @@ import fotoI5 from'./assets/fotoI5.png';
 import conce from'./assets/conce.png';
 import concep from'./assets/concep.png';
 
-import fotoJ1 from'./assets/fotoJ1.png';
+
 
 
 const meusProjetos = [
    {
-     id: 8,
+     id: 1,
     titulo: "logofolio",
     capa: capaH, 
-    fotos: [capaH,fotoC6,capaF,fotoH1, fotoH2, fotoH3, fotoH4, fotoH5, fotoH6], 
+    fotos: [capaH,logo,fotoC6,capaF, fotoH2, fotoH3, fotoH4, fotoH5, fotoH6], 
     descricao: "Portiflio de logos "
   
     },
         {
-    id: 5,
+    id: 2,
+    titulo: "KM Car",
+    capa: logo, 
+    fotos: [logo,capaB,card,app,estoque, oss,painefinan, func1,func2], 
+    descricao: "Logo , identidade visual da marca e site administrativo responsivo"
+    
+  },
+        {
+    id: 3,
     titulo: "Capa \"Chorei Sozinho\"",
     capa: capaE, 
     fotos: [capaE, fotoE2,fotoE3], 
@@ -108,35 +108,23 @@ const meusProjetos = [
   },
   
     {
-    id: 5,
+    id: 4,
     titulo: "KK.Illustration",
     capa: bio, 
     fotos: [bio], 
     descricao: "Releitura capa do album MM.FOOD de MF DOOM verção propria  ."
   },
     {
-    id: 6,
+    id: 5,
     titulo: "Nail Studio Milla Silva",
     capa: capaI, 
     fotos: [capaI, fotoI1, fotoI2, fotoI3, fotoI4, fotoI5], 
     descricao: "Site e identidade visual ."
   },
+,
+   
     {
-    id: 3,
-    titulo: "Ferrari Auto Center",
-    capa: capaB, 
-    fotos: [capaB,estoque, oss,fotoB1,func1,func2, fotoB0, fotoB2, fotoB3, fotoB4, fotoB5, fotoB6, fotoB7], 
-    descricao: "Logo , identidade visual da marca e site administrativo responsivo"
-  },
-   {
-    id: 4,
-    titulo: "KM CAR",
-    capa: fotoJ1, 
-    fotos: [fotoJ1], 
-    descricao: "Logo , identidade visual da marca "
-  },
-    {
-    id: 5,
+    id: 6,
     titulo: "Camping Turvo",
     capa: fotoC3, 
     fotos: [fotoC2, fotoC1, fotoC3, fotoC4, fotoC5, fotoC6], 
@@ -152,14 +140,14 @@ const meusProjetos = [
   
     },
       {
-    id: 2,
+    id: 8,
     titulo: "3% of Virgil in Slawnm",
     capa: capaD, 
     fotos: [capaD,conce, fotoD1, fotoD2, fotoD3, fotoD4], 
     descricao: "Releitura da arte de Slawn em mouse pad."
   },
    {
-    id: 1,
+    id: 9,
     titulo: "Sicliko",
     capa: capaA, 
     // Usamos o nome 'fotos' para bater com o .map que você já tem
@@ -187,26 +175,26 @@ function App() {
     { 
       id: 1, 
       img: capaD,
-      titulo: "Camping Turvo", 
-      url: "campingturvo.com/projeto", 
+      titulo: "3%of Virgil in Slawnm", 
+      url: "3%ofvirgil.com/projeto", 
       top: '30px',      // Fundo
       scale: 1, 
       z: 1
     },
     { 
       id: 2, 
-      img: fotoG3, 
-      titulo: "3%of Virgil in Slkawn", 
-      url: "3%ofvirgil.com/projeto", 
+      img: fotoE1, 
+      titulo: "capa chorei sozinho", 
+      url: "choreisozinho.com/projeto", 
       top: '150px',     // Distância para ver a foto de trás
       scale: 1, 
       z: 2
     },
     { 
       id: 3, 
-      img: fotoE1, 
-      titulo: "Sicliko", 
-      url: "siclikostation.com/projeto", 
+      img: logo, 
+      titulo: "KM Car", 
+      url: "kmcar.com/projeto", 
       top: '330px',    // Distância para ver a foto do meio
       scale: 1, 
       z: 3 
@@ -246,7 +234,12 @@ function App() {
                   <span className="stack-url">{proj.url}</span>
                   <span></span>
                 </div>
-                <img src={proj.img} alt={proj.titulo} style={{width:'100%', height:'calc(100% - 25px)', objectFit:'cover'}} />
+                {/* Verifica se a aba inicial é um vídeo ou uma imagem */}
+{proj.img.includes('.mp4') ? (
+  <video src={proj.img} autoPlay loop muted playsInline style={{width:'100%', height:'calc(100% - 25px)', objectFit:'cover'}}></video>
+) : (
+  <img src={proj.img} alt={proj.titulo} style={{width:'100%', height:'calc(100% - 25px)', objectFit:'cover'}} />
+)}
               </div>
             ))}
           </div>
@@ -613,7 +606,13 @@ Instagram
         {meusProjetos.map(proj => (
           <div key={proj.id} onClick={() => { setProjetoSelecionado(proj); setTelaAtual('galeria_projeto'); }} style={{ cursor: 'pointer', textAlign: 'center' }}>
             {/* Ajustei o width para 100% para ele respeitar a grade de 3 colunas */}
-            <img src={proj.capa} style={{ width: '100%', aspectRatio: '1/1', objectFit: 'cover', borderRadius: '10px' }} />
+           {/* Verifica se a capa é um vídeo ou imagem */}
+{/* Verifica se a capa CONTÉM .mp4 no nome */}
+{proj.capa.includes('.mp4') ? (
+  <video src={proj.capa} autoPlay loop muted playsInline style={{ width: '100%', aspectRatio: '1/1', objectFit: 'cover', borderRadius: '10px' }}></video>
+) : (
+  <img src={proj.capa} style={{ width: '100%', aspectRatio: '1/1', objectFit: 'cover', borderRadius: '10px' }} />
+)}
             <p style={{ fontSize: '12px', marginTop: '5px', color: '#fff' }}>{proj.titulo}</p>
           </div>
         ))}
@@ -636,11 +635,15 @@ Instagram
               <h2>{projetoSelecionado.titulo}</h2>
               <p style={{color: '#ccc', marginBottom: '20px'}}>{projetoSelecionado.descricao}</p>
               
-              <div style={{display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center'}}>
-                {projetoSelecionado.fotos.map((url, index) => (
-                  <img key={index} src={url} style={{width: '90%', borderRadius: '10px', boxShadow: '0 4px 10px rgba(0,0,0,0.3)'}} />
-                ))}
-              </div>
+        <div style={{display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center'}}>
+  {projetoSelecionado.fotos.map((url, index) => (
+    url.includes('.mp4') ? (
+      <video key={index} src={url} autoPlay loop muted playsInline style={{width: '90%', borderRadius: '10px', boxShadow: '0 4px 10px rgba(0,0,0,0.3)'}}></video>
+    ) : (
+      <img key={index} src={url} style={{width: '90%', borderRadius: '10px', boxShadow: '0 4px 10px rgba(0,0,0,0.3)'}} />
+    )
+  ))}
+</div>
             </div>
           </div>
         </div>
