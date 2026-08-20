@@ -656,7 +656,7 @@ Instagram
 {telaAtual === 'grid_projetos' && (
   <div className="window-overlay">
     {/* Adicionei flex e flex-col para separar a barra de título do conteúdo */}
-   <div className="mac-window" style={{ width: '380px' }}>
+   <div className="mac-window" style={{ width: '800px' }}>
       
       <div className="title-bar">
         <div className="dot red" onClick={() => setTelaAtual('desktop')}></div>
