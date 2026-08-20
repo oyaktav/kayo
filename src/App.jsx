@@ -203,13 +203,7 @@ const meusProjetos = [
     descricao: "Projetos de colagens digitais anacrônicas afim de estudo."
   
     },
-    {
-    id: 4,
-    titulo: "KK.Illustration",
-    capa: bio, 
-    fotos: [bio,refdoom], 
-    descricao: "Releitura capa do album MM.FOOD de MF DOOM verção propria  ."
-  },
+  
 ,
       {
     id: 8,
@@ -331,7 +325,7 @@ function App() {
                 </div>
                 <span style={{fontSize: '0.7rem', color: '#666'}}>agora</span>
               </div>
-              <div className="msg-sender">Kayo Taveira</div>
+              <div className="msg-sender">Kriativo Visual</div>
               <div className="msg-text">Direção criativa , direção de arte , marcas e projetos criativos</div>
             </div>
 
@@ -344,7 +338,7 @@ function App() {
                 </div>
                 <span style={{fontSize: '0.7rem', color: '#666'}}>agora</span>
               </div>
-              <div className="msg-sender">Kayo Taveira</div>
+              <div className="msg-sender">Kriativo Visual</div>
               <div className="msg-text">Sites , marketing e administração de perfis </div>
             </div>
 
@@ -358,7 +352,7 @@ function App() {
 
           {/* --- WIDGET GMAIL (CONTATO/ORÇAMENTO) --- */}
   <a
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=kayotaveira2506@gmail.com&su=Orçamento - Projeto de Design"
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=kriativovisual@gmail.com&su=Orçamento - Projeto de Design"
   target="_blank" // Abre em uma nova aba para não fechar seu site
   rel="noopener noreferrer"
   style={{ 
@@ -393,7 +387,7 @@ function App() {
   {/* CONTEÚDO DO E-MAIL */}
   <div style={{ borderTop: '1px solid #eee', paddingTop: '10px' }}>
     <div style={{ fontSize: '0.95rem', color: '#333', marginBottom: '10px' }}>
-      <span style={{ color: '#888' }}>Para:</span> kayotaveira2506@gmail.com
+      <span style={{ color: '#888' }}>Para:</span> kriativovisual@gmail.com
     </div>
     <div style={{ fontSize: '0.95rem', color: '#333', marginBottom: '15px' }}>
       <span style={{ color: '#888' }}>Assunto:</span> Novo Orçamento
@@ -596,7 +590,7 @@ Instagram
             lineHeight: '1.8',
             textAlign: 'center' 
           }}>
-             Kayo Taveira é um criativo de 19y  autodidata de goiás , nascido em goiânia onde atualmente cursa publicidade e propaganda. Desde novo desenvolveu o gosto por expor suas ideias através da arte e criar coisas do zero, o que resultou em uma ansia de tudo aquilo que pode aprender sobre arte e comuicação e na curiosidade de até onde seu sonho e aquilo que ama podem te levar  . Seu trabalho cruza design, arte, moda e identidade , guiado por uma sensibilidade criativa que move o potencial de tudo que vê. Um coringa diciplinar , Kayo flutua entre projetos de direção criativa ,arte ,design, marcas , artistas e produtos que buscam identidade e originalidade. Sua identidade nasce do choque entre refências de rua e da arte classica e comtemporanea ,unindo arte , moda e cultura urbana . Cada projeto é visto e trabalhado com e  como uma experiência , com  foco maximo aos detalhes, impacto visual e social e a construção de narrativas que se conectam com pessoas e grupos .  
+             Kayo Taveira , também conhecido como "Kriativo Visual" é um criativo de 19y  autodidata de goiás , nascido em goiânia onde atualmente cursa publicidade e propaganda. Desde novo desenvolveu o gosto por expor suas ideias através da arte e criar coisas do zero, o que resultou em uma ansia de tudo aquilo que pode aprender sobre arte e comuicação e na curiosidade de até onde seu sonho e aquilo que ama podem te levar  . Seu trabalho cruza design, arte, moda e identidade , guiado por uma sensibilidade criativa que move o potencial de tudo que vê. Um coringa diciplinar , Kayo flutua entre projetos de direção criativa ,arte ,design, marcas , artistas e produtos que buscam identidade e originalidade. Sua identidade nasce do choque entre refências de rua e da arte classica e comtemporanea ,unindo arte , moda e cultura urbana . Cada projeto é visto e trabalhado com e  como uma experiência , com  foco maximo aos detalhes, impacto visual e social e a construção de narrativas que se conectam com pessoas e grupos .  
           </p>
         </div>
 
