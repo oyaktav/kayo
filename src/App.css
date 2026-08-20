@@ -55,7 +55,7 @@ body {
   border-radius: 18px;
   border: 1px solid #ccc;
   box-shadow: 0 -5px 20px rgba(0,0,0,0.15);
-  transition: all 0.4s cubic-bezier(0.40, 0.8, 0.25, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   cursor: pointer;
   overflow: hidden;
   transform-origin: center bottom;
@@ -152,7 +152,17 @@ body {
 
 /* --- TELAS INTERNAS --- */
 .window-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255,255,255,0.6); backdrop-filter: blur(8px); z-index: 100; display: flex; justify-content: center; align-items: center; }
-.mac-window { background: white; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.2); display: flex; flex-direction: column; overflow: hidden; position: relative; }
+.mac-window { 
+  background: white; 
+  border-radius: 30px; 
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2); 
+  display: flex; 
+  flex-direction: column; 
+  overflow: hidden; 
+  position: relative;
+  height: 85vh;        /* Força a janela a ocupar 85% da altura da tela */
+  max-height: 85vh; 
+}
 .title-bar { height: 40px; background: #f3f3f3; border-bottom: 1px solid #ddd; display: flex; align-items: center; padding: 0 15px; gap: 8px; }
 .dot { width: 12px; height: 12px; border-radius: 50%; }
 .red { background: #ff5f57; cursor: pointer; } .yellow { background: #febc2e; } .green { background: #28c840; }
