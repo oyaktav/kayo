@@ -117,8 +117,8 @@ const meusProjetos = [
     titulo: "logofolio",
     capa: capaH, 
     fotos: [fotoC1,kmcar,fotoJ3,fotoI9, fotoH2, fotoH3, ], 
-    descricao: "Portiflio de logos "
-  
+    descricao: "descricao: Sua logo\né a primeira impressão\nque o seu negócio deixa.\n\nAntes de conhecer seu trabalho,\no cliente enxerga sua marca.\nE em poucos segundos,\nele decide o que ela transmite.\n\nUma logo profissional\nnão serve apenas para deixar tudo bonito.\nEla transmite confiança,\nvalor e profissionalismo.\n\nPorque quando sua marca\nparece profissional,\nseu negócio também passa\na ser percebido assim.\n\nSua logo não é apenas um símbolo.\nÉ a identidade que representa\nseu negócio antes mesmo\nque você diga uma palavra."
+     
     },
      {
   id: 10,
@@ -143,7 +143,7 @@ const meusProjetos = [
     titulo: "Identidade Visual",
     capa: capaid, 
     fotos: [fotoJ1,fotoI10,app,fotoC4, ], 
-    descricao: "Portiflio de Identidades "
+    descricao: "Sua identidade visual\nfaz seu negócio ser reconhecido\nantes mesmo do seu nome.\n\nCores, fontes e elementos\nque transmitem sua essência\nem cada detalhe.\n\nPorque ser lembrado\nnão acontece por acaso.\nSua marca precisa\nter identidade."
   
     },
     {
@@ -159,7 +159,7 @@ const meusProjetos = [
     titulo: "BOXE art",
     capa: artg, 
     fotos: [artg,frameg,g,refg], 
-    descricao: "Portiflio de logos "
+    descricao: "Arte esportiva "
   
     },
     {
@@ -168,7 +168,7 @@ const meusProjetos = [
     titulo: "motions",
     capa: capatk, 
     fotos: [logo , fotoJ2,], 
-    descricao: "Portiflio de motions "
+    descricao: "Sua marca pode\nir além do estático.\n\nCom motion,\nsua logo ganha movimento,\npresença e impacto.\n\nUma animação bem feita\nfaz sua marca chamar atenção,\nser lembrada\ne se destacar. "
   
     },
        {
@@ -191,7 +191,7 @@ const meusProjetos = [
     titulo: "Artes e Posts",
     capa: capaap, 
     fotos: [artg,fotoI6,fotoC6,capaE, ], 
-    descricao: "Portiflio de Artes e Posts "
+    descricao: "Seu conteúdo pode\nser visto ou ignorado.\n\nUm bom design\nfaz as pessoas pararem,\nprestarem atenção\ne lembrarem da sua marca.\n\nPorque não basta postar.\nSua arte precisa comunicar,\nvalorizar e convencer."
   
     },
 
@@ -350,7 +350,7 @@ function App() {
 
           </div>
 
-          {/* Perfil */}
+          {/* Perfil */}                   a               zzxsw                                             
           <div className="widget" style={{ top: '15%', right: '-10%', width: '650px', height: '500px' }} onClick={() => irPara('bio')}>
             <img src={imgMapa} alt="Mapa" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             <div style={{position:'absolute', bottom:10, left:10, background:'white', padding:'2px 8px', borderRadius:8, fontSize:'0.7rem', fontWeight:'bold'}}></div>
@@ -410,7 +410,7 @@ function App() {
       lineHeight: '1.4',
       border: '1px solid #eee'
     }}>
-      Clique aqui para redigir sua mensagem...
+      Entre em contato e saiba mais 
     </div>
     
     <p style={{ fontSize: '0.7rem', color: '#aaa', marginTop: '10px', textAlign: 'center' }}>
@@ -434,7 +434,7 @@ function App() {
     flexDirection: 'column',
     alignItems: 'center'
   }} 
-  onClick={() => window.open('https://www.instagram.com/modcarreira18/', '_blank')}
+  onClick={() => window.open('https://www.instagram.com/kriativo_visual/', '_blank')}
 >
   <img 
     src={iconInstagram} 
@@ -530,7 +530,7 @@ Instagram
 
 {/* --- WIDGET INDEPENDENTE: INSTAGRAM --- */}
 <div 
-  onClick={() => window.open('https://www.instagram.com/modcarreira18/', '_blank')}
+  onClick={() => window.open('https://www.instagram.com/kriativo_visual/', '_blank')}
   style={{
     position: 'absolute', top: '1100px', left: '450px', // Fica ao lado do outro
     width: '700px', background: '#fff', borderRadius: '25px',height: '550px',
@@ -656,11 +656,11 @@ Instagram
 {telaAtual === 'grid_projetos' && (
   <div className="window-overlay">
     {/* Adicionei flex e flex-col para separar a barra de título do conteúdo */}
-    <div className="mac-window" style={{ width: '900px', height: '80vh', display: 'flex', flexDirection: 'column' }}>
+    <div className="mac-window" style={{ width: '900px', height: '95vh', display: 'flex', flexDirection: 'column' }}>
       
       <div className="title-bar">
         <div className="dot red" onClick={() => setTelaAtual('desktop')}></div>
-        <span style={{ fontSize: '0.8rem', color: '#fff' }}>Meus Projetos</span>
+        <span style={{ fontSize: '0.8rem', color: '#000000' }}>Meus Projetos</span>
       </div>
 
       {/* ESTA DIV ABAIXO É A CHAVE: 
@@ -670,7 +670,7 @@ Instagram
       <div style={{ 
         padding: '20px', 
         display: 'grid', 
-        gridTemplateColumns: 'repeat(3, 1fr)', 
+        gridTemplateColumns: 'repeat( 1fr)', 
         gap: '20px', 
         overflowY: 'auto', 
         flex: 1 
@@ -686,7 +686,7 @@ Instagram
 ) : (
   <img src={proj.capa} style={{ width: '100%', aspectRatio: '1/1', objectFit: 'cover', borderRadius: '10px' }} />
 )}
-            <p style={{ fontSize: '12px', marginTop: '5px', color: '#fff' }}>{proj.titulo}</p>
+            <p style={{ fontSize: '12px', marginTop: '5px', color: '#0f0f0f' }}>{proj.titulo}</p>
           </div>
         ))}
 
@@ -702,11 +702,11 @@ Instagram
             <div className="title-bar">
               {/* O botão vermelho aqui volta para a GRADE de projetos, não para o desktop */}
               <div className="dot red" onClick={() => setTelaAtual('grid_projetos')}></div>
-              <span style={{fontSize: '0.8rem', color: '#fff'}}>{projetoSelecionado.titulo}</span>
+              <span style={{fontSize: '0.8rem', color: '#0e0d0d'}}>{projetoSelecionado.titulo}</span>
             </div>
             <div style={{padding: '30px', overflowY: 'auto', textAlign: 'center'}}>
               <h2>{projetoSelecionado.titulo}</h2>
-              <p style={{color: '#ccc', marginBottom: '20px'}}>{projetoSelecionado.descricao}</p>
+              <p style={{color: '#797777', marginBottom: '20px'}}>{projetoSelecionado.descricao}</p>
               
         <div style={{display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center'}}>
   {projetoSelecionado.fotos.map((url, index) => (
