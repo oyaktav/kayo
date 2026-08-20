@@ -698,7 +698,7 @@ Instagram
       {/* --- NÍVEL 2: GALERIA DO PROJETO (Abre ao clicar em um projeto específico) --- */}
       {telaAtual === 'galeria_projeto' && projetoSelecionado && (
         <div className="window-overlay">
-          <div className="mac-window" style={{width: '900px', height: '85vh'}}>
+          <div className="mac-window" style={{width: '900px', height: '200vh'}}>
             <div className="title-bar">
               {/* O botão vermelho aqui volta para a GRADE de projetos, não para o desktop */}
               <div className="dot red" onClick={() => setTelaAtual('grid_projetos')}></div>
