@@ -336,10 +336,10 @@ function App() {
   rel="noopener noreferrer"
   style={{ 
     textDecoration: 'none',
-    bottom: '100%', 
+    bottom: '85%', 
     right: '-160%', 
     width: '600px', 
-    height: '500px', // Mudei para auto para o conteúdo caber
+    height: '400px', // Mudei para auto para o conteúdo caber
     padding: '30px', // Reduzi de 150px para 30px para o texto aparecer
     background: '#ffffff',
     borderRadius: '25px',
