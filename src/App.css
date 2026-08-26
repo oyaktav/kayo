@@ -49,8 +49,8 @@ body {
 
 .stack-card {
   position: absolute;
-  width: 200%;
-  height: 400px; 
+  width: 105%;
+  height: 300px; 
   background: white;
   border-radius: 18px;
   border: 1px solid #ccc;
