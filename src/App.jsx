@@ -337,7 +337,7 @@ function App() {
   style={{ 
     textDecoration: 'none',
     bottom: '70%', 
-    right: '-145%', 
+    right: '-135%', 
     width: '400px', 
     height: '500px', // Mudei para auto para o conteúdo caber
     padding: '30px', // Reduzi de 150px para 30px para o texto aparecer
@@ -420,7 +420,7 @@ function App() {
 <div  
   style={{ 
     position: 'absolute', 
-    top: '7%', 
+    top: '8%', 
     left: '75%', 
     transform: 'translate(-70%, -37%)', 
     textAlign: 'center', 
@@ -480,7 +480,7 @@ Instagram
   style={{ 
     position: 'absolute', 
     top: '11%', 
-    left: '23%', 
+    left: '21%', 
     transform: 'translate(61%, -70%)', 
     textAlign: 'center', 
     cursor: 'pointer' 
