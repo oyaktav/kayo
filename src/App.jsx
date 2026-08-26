@@ -337,7 +337,7 @@ function App() {
   style={{ 
     textDecoration: 'none',
     bottom: '80%', 
-    right: '-135%', 
+    right: '-145%', 
     width: '600px', 
     height: '500px', // Mudei para auto para o conteúdo caber
     padding: '30px', // Reduzi de 150px para 30px para o texto aparecer
