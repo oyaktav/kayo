@@ -337,7 +337,7 @@ function App() {
   style={{ 
     textDecoration: 'none',
     bottom: '70%', 
-    right: '-155%', 
+    right: '-120%', 
     width: '400px', 
     height: '500px', // Mudei para auto para o conteúdo caber
     padding: '30px', // Reduzi de 150px para 30px para o texto aparecer
@@ -479,8 +479,8 @@ Instagram
 <div 
   style={{ 
     position: 'absolute', 
-    top: '10%', 
-    left: '27%', 
+    top: '11%', 
+    left: '15%', 
     transform: 'translate(61%, -70%)', 
     textAlign: 'center', 
     cursor: 'pointer' 
