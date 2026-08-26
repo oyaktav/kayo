@@ -109,7 +109,7 @@ import refg from'./assets/refg.png';
 import capaid from'./assets/capaid.png';
 import capaap from'./assets/capaap.png';
 import capatk from'./assets/capatk.png';
-
+import zapicon from'./assets/zapicon.png';
 const meusProjetos = [
    {
 
@@ -329,36 +329,15 @@ function App() {
               <div className="msg-text">Direção criativa , direção de arte , marcas e projetos criativos</div>
             </div>
 
-            {/* Mensagem 2 */}
-            <div className="ios-msg">
-              <div className="msg-header">
-                <div className="msg-app">
-                  <div className="msg-icon"><div className="bubble-icon"></div></div>
-                  MENSAGENS
-                </div>
-                <span style={{fontSize: '0.7rem', color: '#666'}}>agora</span>
-              </div>
-              <div className="msg-sender">Kriativo Visual</div>
-              <div className="msg-text">Sites , marketing e administração de perfis </div>
-            </div>
-
-          </div>
-
-          {/* Perfil */}                   a               zzxsw                                             
-          <div className="widget" style={{ top: '15%', right: '-10%', width: '650px', height: '500px' }} onClick={() => irPara('bio')}>
-            <img src={imgMapa} alt="Mapa" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
-            <div style={{position:'absolute', bottom:10, left:10, background:'white', padding:'2px 8px', borderRadius:8, fontSize:'0.7rem', fontWeight:'bold'}}></div>
-          </div>
-
-          {/* --- WIDGET GMAIL (CONTATO/ORÇAMENTO) --- */}
+             {/* --- WIDGET GMAIL (CONTATO/ORÇAMENTO) --- */}
   <a
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=kriativovisual@gmail.com&su=Orçamento - Projeto de Design"
+  href="https://wa.me/message/TK32IXQTFVDJM1"
   target="_blank" // Abre em uma nova aba para não fechar seu site
   rel="noopener noreferrer"
   style={{ 
     textDecoration: 'none',
-    bottom: '23%', 
-    right: '2%', 
+    bottom: '55%', 
+    right: '-175%', 
     width: '400px', 
     height: '500px', // Mudei para auto para o conteúdo caber
     padding: '30px', // Reduzi de 150px para 30px para o texto aparecer
@@ -387,7 +366,7 @@ function App() {
   {/* CONTEÚDO DO E-MAIL */}
   <div style={{ borderTop: '1px solid #eee', paddingTop: '10px' }}>
     <div style={{ fontSize: '0.95rem', color: '#333', marginBottom: '10px' }}>
-      <span style={{ color: '#888' }}>Para:</span> kriativovisual@gmail.com
+      <span style={{ color: '#888' }}>Para:</span> kriativovisualcontato
     </div>
     <div style={{ fontSize: '0.95rem', color: '#333', marginBottom: '15px' }}>
       <span style={{ color: '#888' }}>Assunto:</span> Novo Orçamento
@@ -408,17 +387,40 @@ function App() {
     </div>
     
     <p style={{ fontSize: '0.7rem', color: '#aaa', marginTop: '10px', textAlign: 'center' }}>
-      (Ao clicar, seu aplicativo de e-mail será aberto)
+      (Ao clicar, seu whatsapp será aberto)
     </p>
 
   </div>
 
 </a>
+
+            {/* Mensagem 2 */}
+            <div className="ios-msg">
+              <div className="msg-header">
+                <div className="msg-app">
+                  <div className="msg-icon"><div className="bubble-icon"></div></div>
+                  MENSAGENS
+                </div>
+                <span style={{fontSize: '0.7rem', color: '#666'}}>agora</span>
+              </div>
+              <div className="msg-sender">Kriativo Visual</div>
+              <div className="msg-text">Produção audio visual ,sites , marketing , social midia  </div>
+            </div>
+
+          </div>
+
+          {/* Perfil */}                   a               zzxsw                                             
+          <div className="widget" style={{ top: '15%', right: '-10%', width: '650px', height: '500px' }} onClick={() => irPara('bio')}>
+            <img src={imgMapa} alt="Mapa" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+            <div style={{position:'absolute', bottom:10, left:10, background:'white', padding:'2px 8px', borderRadius:8, fontSize:'0.7rem', fontWeight:'bold'}}></div>
+          </div>
+
+         
        {/* ig - Bloco Corrigido e Simplificado */}
 <div  
   style={{ 
     position: 'absolute', 
-    top: '8%', 
+    top: '5%', 
     left: '75%', 
     transform: 'translate(-70%, -37%)', 
     textAlign: 'center', 
@@ -432,7 +434,7 @@ function App() {
 >
   <img 
     src={iconInstagram} 
-    alt="Spotify" 
+    alt="Instagram" 
     style={{ 
       width: '160%', 
       height: 'auto', 
@@ -470,6 +472,25 @@ Instagram
   
   <p style={{ fontSize: '1.7rem', fontWeight: 'bold', marginTop: '-8px', color: '#000000' }}>
    Behance
+  </p>
+</div>
+
+{/*whatsapp*/}
+<div 
+  style={{ 
+    position: 'absolute', 
+    top: '14%', 
+    left: '27%', 
+    transform: 'translate(61%, -70%)', 
+    textAlign: 'center', 
+    cursor: 'pointer' 
+  }} 
+  onClick={() => window.open('https://wa.me/message/TK32IXQTFVDJM1', '_blank')}
+>
+  <img src={zapicon} alt="WhatsApp" style={{ width: '300px' }} />
+  
+  <p style={{ fontSize: '1.7rem', fontWeight: 'bold', marginTop: '-8px', color: '#000000' }}>
+    WhatsApp
   </p>
 </div>
 
