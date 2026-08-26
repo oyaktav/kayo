@@ -336,7 +336,7 @@ function App() {
   rel="noopener noreferrer"
   style={{ 
     textDecoration: 'none',
-    bottom: '85%', 
+    bottom: '100%', 
     right: '-160%', 
     width: '600px', 
     height: '400px', // Mudei para auto para o conteúdo caber
