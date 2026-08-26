@@ -336,8 +336,8 @@ function App() {
   rel="noopener noreferrer"
   style={{ 
     textDecoration: 'none',
-    bottom: '55%', 
-    right: '-175%', 
+    bottom: '70%', 
+    right: '-155%', 
     width: '400px', 
     height: '500px', // Mudei para auto para o conteúdo caber
     padding: '30px', // Reduzi de 150px para 30px para o texto aparecer
@@ -479,7 +479,7 @@ Instagram
 <div 
   style={{ 
     position: 'absolute', 
-    top: '14%', 
+    top: '10%', 
     left: '27%', 
     transform: 'translate(61%, -70%)', 
     textAlign: 'center', 
@@ -489,7 +489,7 @@ Instagram
 >
   <img src={zapicon} alt="WhatsApp" style={{ width: '300px' }} />
   
-  <p style={{ fontSize: '1.7rem', fontWeight: 'bold', marginTop: '-8px', color: '#000000' }}>
+  <p style={{ fontSize: '1.7rem', fontWeight: 'bold', marginTop: '-70px', color: '#000000' }}>
     WhatsApp
   </p>
 </div>
