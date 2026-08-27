@@ -259,9 +259,9 @@ function App() {
   const abasProjetos = [
     { 
       id: 1, 
-      img: fotoJ2,
-      titulo: "DIGITI CELL", 
-      url: "digiticell.com/projeto", 
+      img: fotoC4,
+      titulo: "CAMPING TURVO", 
+      url: "campingturvo.com/projeto", 
       top: '5px',      // Fundo
       scale: 1, 
       z: 1
@@ -516,8 +516,8 @@ Instagram
 <div 
   style={{ 
     position: 'absolute', 
-    top: '80%', 
-    left: '-2%', 
+    top: '83%', 
+    left: '-4%', 
     transform: 'translate(61%, -70%)', 
     textAlign: 'center', 
     cursor: 'pointer' 
