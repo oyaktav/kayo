@@ -110,8 +110,26 @@ import capaid from'./assets/capaid.png';
 import capaap from'./assets/capaap.png';
 import capatk from'./assets/capatk.png';
 import zapicon from'./assets/zapicon.png';
+
+import fotok1 from'./assets/fotok1.png';
+import fotok2 from'./assets/fotok2.png';
+import fotok3 from'./assets/fotok3.png';
+import fotok4 from'./assets/fotok4.png';
+import fotok5 from'./assets/fotok5.png';
+import fotok6 from'./assets/fotok6.png';
+import ttkicon from'./assets/ttkicon.png';
+
 const meusProjetos = [
    {
+
+     id: 1,
+    titulo: "minha identidade",
+    capa: fotok2, 
+    fotos: [fotok1,fotok2,fotok3,fotok4, fotok5, fotok6, ], 
+    descricao: "Um design ou publicitário sem identidade não é oque diz ser."
+     
+    },
+  {
 
      id: 1,
     titulo: "logofolio",
@@ -493,6 +511,26 @@ Instagram
     WhatsApp
   </p>
 </div>
+
+{/*tiktok*/}
+<div 
+  style={{ 
+    position: 'absolute', 
+    top: '80%', 
+    left: '-1%', 
+    transform: 'translate(61%, -70%)', 
+    textAlign: 'center', 
+    cursor: 'pointer' 
+  }} 
+  onClick={() => window.open('https://www.tiktok.com/@kriativo_visual', '_blank')}
+>
+  <img src={ttkicon} alt="TikTok" style={{ width: '180px' }} />
+  
+  <p style={{ fontSize: '1.7rem', fontWeight: 'bold', marginTop: '-70px', color: '#000000' }}>
+    TikTok
+  </p>
+</div>
+
 
 {/* Ícone de Pasta - Navegação Interna */}
 <div 
