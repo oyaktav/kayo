@@ -517,7 +517,7 @@ Instagram
   style={{ 
     position: 'absolute', 
     top: '83%', 
-    left: '-4%', 
+    left: '-6%', 
     transform: 'translate(61%, -70%)', 
     textAlign: 'center', 
     cursor: 'pointer' 
@@ -526,7 +526,7 @@ Instagram
 >
   <img src={ttkicon} alt="TikTok" style={{ width: '180px' }} />
   
-  <p style={{ fontSize: '1.7rem', fontWeight: 'bold', marginTop: '-10px', color: '#000000' }}>
+  <p style={{ fontSize: '1.7rem', fontWeight: 'bold', marginTop: '-20px', color: '#000000' }}>
     TikTok
   </p>
 </div>
