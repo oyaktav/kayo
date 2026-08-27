@@ -124,7 +124,7 @@ const meusProjetos = [
 
      id: 1,
     titulo: "minha identidade",
-    capa: fotok2, 
+    capa: fotok3, 
     fotos: [fotok1,fotok2,fotok3,fotok4, fotok5, fotok6, ], 
     descricao: "Um design ou publicitário sem identidade não é oque diz ser."
      
@@ -517,7 +517,7 @@ Instagram
   style={{ 
     position: 'absolute', 
     top: '80%', 
-    left: '-1%', 
+    left: '-2%', 
     transform: 'translate(61%, -70%)', 
     textAlign: 'center', 
     cursor: 'pointer' 
@@ -526,7 +526,7 @@ Instagram
 >
   <img src={ttkicon} alt="TikTok" style={{ width: '180px' }} />
   
-  <p style={{ fontSize: '1.7rem', fontWeight: 'bold', marginTop: '-70px', color: '#000000' }}>
+  <p style={{ fontSize: '1.7rem', fontWeight: 'bold', marginTop: '-10px', color: '#000000' }}>
     TikTok
   </p>
 </div>
