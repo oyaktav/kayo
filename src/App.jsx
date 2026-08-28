@@ -526,7 +526,7 @@ Instagram
 >
   <img src={ttkicon} alt="TikTok" style={{ width: '180px' }} />
   
-  <p style={{ fontSize: '1.7rem', fontWeight: 'bold', marginTop: '-20px', color: '#000000' }}>
+  <p style={{ fontSize: '1.7rem', fontWeight: 'bold', marginTop: '-40px', color: '#000000' }}>
     TikTok
   </p>
 </div>
