@@ -283,27 +283,27 @@ function App() {
   const abasProjetos = [
     { 
       id: 1, 
-      img: fotoC4,
-      titulo: "CAMPING TURVO", 
-      url: "campingturvo.com/projeto", 
+      img: capavm,
+      titulo: "VIDEO MAKER", 
+      url: "videomaker.com/projeto", 
       top: '5px',      // Fundo
       scale: 1, 
       z: 1
     },
     { 
       id: 2, 
-      img: fotoI6, 
-      titulo: "NAIL STUDIO MILLA SILVA", 
-      url: "nailstudio.com/projeto", 
+      img: capaid, 
+      titulo: "IDENTIDADE VISUAL", 
+      url: "identidadevisual.com/projeto", 
       top: '200px',     // Distância para ver a foto de trás
       scale: 1, 
       z: 2
     },
     { 
       id: 3, 
-      img: artg, 
-      titulo: "ARTE ESPORTIVA BOXE", 
-      url: "artesportivaboxe.com/projeto", 
+      img: capaH, 
+      titulo: "LOGOFOLIO", 
+      url: "logofolio.com/projeto", 
       top: '450px',    // Distância para ver a foto do meio
       scale: 1, 
       z: 3 
