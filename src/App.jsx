@@ -108,8 +108,12 @@ import refg from'./assets/refg.png';
 
 import capaid from'./assets/capaid.png';
 import capaap from'./assets/capaap.png';
-import capatk from'./assets/capatk.png';
+import capatk from'./assets/capatk.mp4';
 import zapicon from'./assets/zapicon.png';
+import capavm from'./assets/capavm.mp4';
+import vm1 from'./assets/vm1.mp4';
+import vm2 from'./assets/vm2.mp4';
+
 
 import fotok1 from'./assets/fotok1.png';
 import fotok2 from'./assets/fotok2.png';
@@ -119,16 +123,16 @@ import fotok5 from'./assets/fotok5.png';
 import fotok6 from'./assets/fotok6.png';
 import ttkicon from'./assets/ttkicon.png';
 
-const meusProjetos = [
-   {
+import id1 from'./assets/id1.png';
+import id2 from'./assets/id2.png';
+import id3 from'./assets/id3.png';
+import id4 from'./assets/id4.png';
+import id5 from'./assets/id5.png';
 
-     id: 1,
-    titulo: "minha identidade",
-    capa: fotok3, 
-    fotos: [fotok1,fotok2,fotok3,fotok4, fotok5, fotok6, ], 
-    descricao: "Um design ou publicitário sem identidade não é oque diz ser."
-     
-    },
+
+
+const meusProjetos = [
+
   {
 
      id: 1,
@@ -138,6 +142,67 @@ const meusProjetos = [
     descricao: "descricao: Sua logo\né a primeira impressão\nque o seu negócio deixa.\n\nAntes de conhecer seu trabalho,\no cliente enxerga sua marca.\nE em poucos segundos,\nele decide o que ela transmite.\n\nUma logo profissional\nnão serve apenas para deixar tudo bonito.\nEla transmite confiança,\nvalor e profissionalismo.\n\nPorque quando sua marca\nparece profissional,\nseu negócio também passa\na ser percebido assim.\n\nSua logo não é apenas um símbolo.\nÉ a identidade que representa\nseu negócio antes mesmo\nque você diga uma palavra."
      
     },
+    {
+
+     id: 1,
+    titulo: "IDENTIDADE VISUAL",
+    capa: capaid, 
+    fotos: [id1,id2,id3,id4, id5, ], 
+    descricao: "Sua identidade visual\nfaz seu negócio ser reconhecido\nantes mesmo do seu nome.\n\nCores, fontes e elementos\nque transmitem sua essência\nem cada detalhe.\n\nPorque ser lembrado\nnão acontece por acaso.\nSua marca precisa\nter identidade."
+  
+    },
+    {
+
+     id: 1,
+    titulo: "ARTES E POSTS",
+    capa: capaap, 
+    fotos: [artg,fotoI6,fotoC6,capaE, ], 
+    descricao: "Seu conteúdo pode\nser visto ou ignorado.\n\nUm bom design\nfaz as pessoas pararem,\nprestarem atenção\ne lembrarem da sua marca.\n\nPorque não basta postar.\nSua arte precisa comunicar,\nvalorizar e convencer."
+  
+    },
+    {
+
+     id: 1,
+    titulo: "VIDEO MAKER",
+    capa: capavm, 
+    fotos: [vm1,vm2 ], 
+    descricao: "Seu conteúdo pode\nser visto ou ignorado.\n\nUm bom design\nfaz as pessoas pararem,\nprestarem atenção\ne lembrarem da sua marca.\n\nPorque não basta postar.\nSua arte precisa comunicar,\nvalorizar e convencer."
+  
+    },
+    {
+
+     id: 1,
+    titulo: "MOTION DESIGN",
+    capa: capatk, 
+    fotos: [logo , fotoJ2,], 
+    descricao: "Sua marca pode\nir além do estático.\n\nCom motion,\nsua logo ganha movimento,\npresença e impacto.\n\nUma animação bem feita\nfaz sua marca chamar atenção,\nser lembrada\ne se destacar. "
+  
+    },
+    {
+
+     id: 4,
+    titulo: "BOXE art",
+    capa: artg, 
+    fotos: [artg,frameg,g,refg], 
+    descricao: "Arte esportiva "
+  
+    },
+     
+    {
+    id: 5,
+    titulo: "Nail Studio Milla Silva",
+    capa: fotoI6, 
+    fotos: [fotoI6, fotoI7, fotoI8, fotoI9, fotoI10, fotoI1, fotoI2, fotoI3, fotoI4, fotoI5], 
+    descricao: "Site e identidade visual ."
+  },
+    {
+    id: 6,
+    titulo: "Camping Turvo",
+    capa: fotoC4, 
+    fotos: [fotoC1, fotoC2, fotoC3, fotoC4, fotoC5, fotoC6], 
+    descricao: "Logo , identidade visual da marca e posts."
+  },
+    
      {
   id: 10,
     titulo: "DIGITI CELL",
@@ -150,51 +215,10 @@ const meusProjetos = [
         {
     id: 2,
     titulo: "KM Car",
-    capa: logo, 
+    capa: capaB, 
     fotos: [kmcar,coreskm,tipografia,capaB,card,app,estoque, oss,painefinan, func1,func2], 
     descricao: "Logo , identidade visual da marca e site administrativo responsivo"
     
-  },
-   {
-
-     id: 1,
-    titulo: "Identidade Visual",
-    capa: capaid, 
-    fotos: [fotoJ1,fotoI10,app,fotoC4, ], 
-    descricao: "Sua identidade visual\nfaz seu negócio ser reconhecido\nantes mesmo do seu nome.\n\nCores, fontes e elementos\nque transmitem sua essência\nem cada detalhe.\n\nPorque ser lembrado\nnão acontece por acaso.\nSua marca precisa\nter identidade."
-  
-    },
-    {
-    id: 5,
-    titulo: "Nail Studio Milla Silva",
-    capa: fotoI6, 
-    fotos: [fotoI6, fotoI7, fotoI8, fotoI9, fotoI10, fotoI1, fotoI2, fotoI3, fotoI4, fotoI5], 
-    descricao: "Site e identidade visual ."
-  },
-    {
-
-     id: 4,
-    titulo: "BOXE art",
-    capa: artg, 
-    fotos: [artg,frameg,g,refg], 
-    descricao: "Arte esportiva "
-  
-    },
-    {
-
-     id: 1,
-    titulo: "motions",
-    capa: capatk, 
-    fotos: [logo , fotoJ2,], 
-    descricao: "Sua marca pode\nir além do estático.\n\nCom motion,\nsua logo ganha movimento,\npresença e impacto.\n\nUma animação bem feita\nfaz sua marca chamar atenção,\nser lembrada\ne se destacar. "
-  
-    },
-       {
-    id: 6,
-    titulo: "Camping Turvo",
-    capa: fotoC4, 
-    fotos: [fotoC1, fotoC2, fotoC3, fotoC4, fotoC5, fotoC6], 
-    descricao: "Logo , identidade visual da marca e posts."
   },
         {
     id: 3,
@@ -203,14 +227,14 @@ const meusProjetos = [
     fotos: [capaE, fotoE2,fotoE3,refleo], 
     descricao: "Direção criativa e Direção de arte da capa do single \"Chorei Sozinho\" "
   },
-   {
+  {
 
      id: 1,
-    titulo: "Artes e Posts",
-    capa: capaap, 
-    fotos: [artg,fotoI6,fotoC6,capaE, ], 
-    descricao: "Seu conteúdo pode\nser visto ou ignorado.\n\nUm bom design\nfaz as pessoas pararem,\nprestarem atenção\ne lembrarem da sua marca.\n\nPorque não basta postar.\nSua arte precisa comunicar,\nvalorizar e convencer."
-  
+    titulo: "minha identidade",
+    capa: fotok3, 
+    fotos: [fotok1,fotok2,fotok3,fotok4, fotok5, fotok6, ], 
+    descricao: "Um design ou publicitário sem identidade não é oque diz ser."
+     
     },
 
    {
