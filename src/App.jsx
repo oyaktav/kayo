@@ -1,0 +1,841 @@
+import React, { useState } from 'react';
+import './App.css';
+
+/* --- SUAS IMAGENS --- */
+import fotoPerfil from './assets/img1.png';
+import imgMapa from './assets/img2.png';
+
+import iconPasta from './assets/icon.png';
+import iconInstagram from './assets/icon-ig.png';
+import iconPastaNova from './assets/pasta.png';
+// Importe as fotos que você quer usar (use os nomes reais dos arquivos na sua pasta assets)
+import capaA from './assets/fotoA3.png';
+import fotoA1 from './assets/fotoA1.png';
+import fotoA2 from'./assets/fotoA2.png';
+import fotoA3 from'./assets/fotoA3.png';
+import fotoA4 from './assets/fotoA4.png';
+import fotoA5 from'./assets/fotoA5.png';
+import fotoA6 from'./assets/fotoA6.png';
+
+
+
+
+import estoque from './assets/estoque.png';
+import oss from './assets/oss.png';
+import func1 from './assets/func1.png';
+import func2 from './assets/func2.png';
+import capaB from './assets/capaB.png';
+import painefinan from './assets/painefinan.png';
+import card from './assets/card.png';
+import app from './assets/app.png';
+import logo from './assets/logo.mp4';
+
+import bio from './assets/imgMapa.png';
+import eu from './assets/eu.png';
+import perfil from './assets/perfil.png';
+
+import fotoC1 from './assets/fotoC1.png';
+import fotoC2 from'./assets/fotoC2.png';
+import fotoC3 from'./assets/fotoC3.png';
+import fotoC4 from './assets/fotoC4.png';
+import fotoC5 from'./assets/fotoC5.png';
+import fotoC6 from'./assets/fotoC6.png';
+
+import capaD from './assets/fotoD2.png';
+import fotoD1 from './assets/fotoD1.png';
+import fotoD2 from'./assets/fotoD2.png';
+import fotoD3 from'./assets/fotoD3.png';
+import fotoD4 from './assets/fotoD4.png';
+
+import capaE from './assets/fotoE1.png';
+import fotoE1 from './assets/fotoE1.png';
+import fotoE2 from './assets/fotoE2.png';
+import fotoE3 from './assets/fotoE3.png';
+
+import capaF from './assets/fotoF1.png';
+
+
+import capaG from './assets/fotoG3.png';
+import fotoG1 from './assets/capaG.png';
+import fotoG2 from './assets/fotoG1.png';
+import fotoG3 from './assets/fotoG3.png';
+import fotoG4 from './assets/fotoG4.png';
+
+import capaH from './assets/capaH.png';
+import fotoH1 from './assets/fotoH1.png';
+import fotoH2 from'./assets/fotoH2.png';
+import fotoH3 from'./assets/fotoH3.png';
+import fotoH4 from './assets/fotoH4.png';
+import fotoH5 from'./assets/fotoH5.png';
+import fotoH6 from'./assets/fotoH6.png';
+
+import capaI from './assets/capaI.png';
+import fotoI1 from './assets/fotoI1.png';
+import fotoI2 from'./assets/fotoI2.png';
+import fotoI3 from'./assets/fotoI3.png';
+import fotoI4 from './assets/fotoI4.png';
+import fotoI5 from'./assets/fotoI5.png';
+import fotoI6 from './assets/fotoI6.png';
+import fotoI7 from'./assets/fotoI7.png';
+import fotoI8 from'./assets/fotoI8.png';
+import fotoI9 from './assets/fotoI9.png';
+import fotoI10 from'./assets/fotoI10.png';
+
+
+import fotoJ1 from './assets/fotoJ1.png';
+import fotoJ2 from'./assets/fotoJ2.mp4';
+import fotoJ3 from'./assets/fotoJ3.png';
+import fotoJ4 from './assets/fotoJ4.png';
+import fotoJ5 from'./assets/fotoJ5.png';
+import fotoJ6 from'./assets/fotoJ6.png';
+
+import conce from'./assets/conce.png';
+import concep from'./assets/concep.png';
+
+import kmcar from'./assets/kmcar.png';
+import tipografia from'./assets/tipografia.png';
+import coreskm from'./assets/coreskm.png';
+
+import refleo from'./assets/refleo.png';
+import refpad from'./assets/refpad.png';
+import refdoom from'./assets/refdoom.png';
+import refescola from'./assets/refescola.png';
+
+import frameg from'./assets/frameg.png';
+import artg from'./assets/artg.png';
+import g from'./assets/g.png';
+import refg from'./assets/refg.png';
+
+import capaid from'./assets/capaid.png';
+import capaap from'./assets/capaap.png';
+import capatk from'./assets/capatk.mp4';
+import zapicon from'./assets/zapicon.png';
+import capavm from'./assets/capavm.mp4';
+import vm1 from'./assets/vm1.mp4';
+import vm2 from'./assets/vm2.mp4';
+
+
+import fotok1 from'./assets/fotok1.png';
+import fotok2 from'./assets/fotok2.png';
+import fotok3 from'./assets/fotok3.png';
+import fotok4 from'./assets/fotok4.png';
+import fotok5 from'./assets/fotok5.png';
+import fotok6 from'./assets/fotok6.png';
+import ttkicon from'./assets/ttkicon.png';
+
+import id1 from'./assets/id1.png';
+import id2 from'./assets/id2.png';
+import id3 from'./assets/id3.png';
+import id4 from'./assets/id4.png';
+import id5 from'./assets/id5.png';
+
+
+
+const meusProjetos = [
+
+  {
+
+     id: 1,
+    titulo: "logofolio",
+    capa: capaH, 
+    fotos: [fotoC1,kmcar,fotoJ3,fotoI9, fotoH2, fotoH3, ], 
+    descricao: "descricao: Sua logo\né a primeira impressão\nque o seu negócio deixa.\n\nAntes de conhecer seu trabalho,\no cliente enxerga sua marca.\nE em poucos segundos,\nele decide o que ela transmite.\n\nUma logo profissional\nnão serve apenas para deixar tudo bonito.\nEla transmite confiança,\nvalor e profissionalismo.\n\nPorque quando sua marca\nparece profissional,\nseu negócio também passa\na ser percebido assim.\n\nSua logo não é apenas um símbolo.\nÉ a identidade que representa\nseu negócio antes mesmo\nque você diga uma palavra."
+     
+    },
+    {
+
+     id: 1,
+    titulo: "IDENTIDADE VISUAL",
+    capa: capaid, 
+    fotos: [id1,id2,id3,id4, id5, ], 
+    descricao: "Sua identidade visual\nfaz seu negócio ser reconhecido\nantes mesmo do seu nome.\n\nCores, fontes e elementos\nque transmitem sua essência\nem cada detalhe.\n\nPorque ser lembrado\nnão acontece por acaso.\nSua marca precisa\nter identidade."
+  
+    },
+    {
+
+     id: 1,
+    titulo: "ARTES E POSTS",
+    capa: capaap, 
+    fotos: [artg,fotoI6,fotoC6,capaE, ], 
+    descricao: "Seu conteúdo pode\nser visto ou ignorado.\n\nUm bom design\nfaz as pessoas pararem,\nprestarem atenção\ne lembrarem da sua marca.\n\nPorque não basta postar.\nSua arte precisa comunicar,\nvalorizar e convencer."
+  
+    },
+    {
+
+     id: 1,
+    titulo: "VIDEO MAKER",
+    capa: capavm, 
+    fotos: [vm1,vm2 ], 
+    descricao: "Seu conteúdo pode\nser visto ou ignorado.\n\nUm bom design\nfaz as pessoas pararem,\nprestarem atenção\ne lembrarem da sua marca.\n\nPorque não basta postar.\nSua arte precisa comunicar,\nvalorizar e convencer."
+  
+    },
+    {
+
+     id: 1,
+    titulo: "MOTION DESIGN",
+    capa: capatk, 
+    fotos: [logo , fotoJ2,], 
+    descricao: "Sua marca pode\nir além do estático.\n\nCom motion,\nsua logo ganha movimento,\npresença e impacto.\n\nUma animação bem feita\nfaz sua marca chamar atenção,\nser lembrada\ne se destacar. "
+  
+    },
+    {
+
+     id: 4,
+    titulo: "BOXE art",
+    capa: artg, 
+    fotos: [artg,frameg,g,refg], 
+    descricao: "Arte esportiva "
+  
+    },
+     
+    {
+    id: 5,
+    titulo: "Nail Studio Milla Silva",
+    capa: fotoI6, 
+    fotos: [fotoI6, fotoI7, fotoI8, fotoI9, fotoI10, fotoI1, fotoI2, fotoI3, fotoI4, fotoI5], 
+    descricao: "Site e identidade visual ."
+  },
+    {
+    id: 6,
+    titulo: "Camping Turvo",
+    capa: fotoC4, 
+    fotos: [fotoC1, fotoC2, fotoC3, fotoC4, fotoC5, fotoC6], 
+    descricao: "Logo , identidade visual da marca e posts."
+  },
+    
+     {
+  id: 10,
+    titulo: "DIGITI CELL",
+    capa: fotoJ2, 
+    // Usamos o nome 'fotos' para bater com o .map que você já tem
+    fotos: [ fotoJ1, fotoJ2, fotoJ3, fotoJ4, fotoJ5, fotoJ6], 
+    descricao: "Identidade visual e direção criativa  da marca."
+  },
+   
+        {
+    id: 2,
+    titulo: "KM Car",
+    capa: capaB, 
+    fotos: [kmcar,coreskm,tipografia,capaB,card,app,estoque, oss,painefinan, func1,func2], 
+    descricao: "Logo , identidade visual da marca e site administrativo responsivo"
+    
+  },
+        {
+    id: 3,
+    titulo: "Capa \"Chorei Sozinho\"",
+    capa: capaE, 
+    fotos: [capaE, fotoE2,fotoE3,refleo], 
+    descricao: "Direção criativa e Direção de arte da capa do single \"Chorei Sozinho\" "
+  },
+  {
+
+     id: 1,
+    titulo: "minha identidade",
+    capa: fotok3, 
+    fotos: [fotok1,fotok2,fotok3,fotok4, fotok5, fotok6, ], 
+    descricao: "Um design ou publicitário sem identidade não é oque diz ser."
+     
+    },
+
+   {
+     id: 7,
+    titulo: "Colagens digitais anacrônicas",
+    capa: capaG, 
+    fotos: [capaG,concep, refescola,fotoG1, fotoG2, fotoG3,fotoG4], 
+    descricao: "Projetos de colagens digitais anacrônicas afim de estudo."
+  
+    },
+  
+,
+      {
+    id: 8,
+    titulo: "3% of Virgil in Slawnm",
+    capa: capaD, 
+    fotos: [capaD,conce, fotoD1,refpad], 
+    descricao: "Releitura da arte de Slawn em mouse pad."
+  },
+   {
+    id: 9,
+    titulo: "Sicliko",
+    capa: capaA, 
+    // Usamos o nome 'fotos' para bater com o .map que você já tem
+    fotos: [capaA, fotoA1, fotoA2, fotoA3, fotoA4, fotoA5, fotoA6], 
+    descricao: "Identidade visual e direção criativa  da marca."
+  },
+ 
+   
+
+  
+  
+  
+
+];
+  // Adicione mais projetos aqui se quiser
+
+
+
+function App() {
+  const [telaAtual, setTelaAtual] = useState('desktop');
+  const [projetoSelecionado, setProjetoSelecionado] = useState(null);
+  
+
+  // --- CONFIGURAÇÃO DAS ABAS (MANTIDO O ESPAÇAMENTO PERFEITO) ---
+  const abasProjetos = [
+    { 
+      id: 1, 
+      img: capavm,
+      titulo: "VIDEO MAKER", 
+      url: "videomaker.com/projeto", 
+      top: '5px',      // Fundo
+      scale: 1, 
+      z: 1
+    },
+    { 
+      id: 2, 
+      img: capaid, 
+      titulo: "IDENTIDADE VISUAL", 
+      url: "identidadevisual.com/projeto", 
+      top: '200px',     // Distância para ver a foto de trás
+      scale: 1, 
+      z: 2
+    },
+    { 
+      id: 3, 
+      img: capaH, 
+      titulo: "LOGOFOLIO", 
+      url: "logofolio.com/projeto", 
+      top: '450px',    // Distância para ver a foto do meio
+      scale: 1, 
+      z: 3 
+    },
+  ];
+
+  
+
+  const irPara = (tela) => setTelaAtual(tela);
+  const abrirDetalhe = (proj) => { setProjetoSelecionado(proj); setTelaAtual('detail'); };
+  const fechar = () => { setTelaAtual('desktop'); setProjetoSelecionado(null); };
+
+  return (
+  
+    <div>
+      {/* Botão Voltar */}
+      {telaAtual !== 'desktop' && (
+        <div className="home-btn" onClick={fechar}>Pagina Inicial</div>
+      )}
+
+      {/* --- TELA 1: DESKTOP --- */}
+      
+      {telaAtual === 'desktop' && (
+        <div className="desktop-container">
+          
+          {/* PILHA DE PROJETOS (STACK)  */}
+          <div className="home-stack-wrapper">
+            {abasProjetos.map((proj) => (
+              <div 
+                key={proj.id}
+                className="stack-card"
+                style={{ top: proj.top, zIndex: proj.z, transform: `scale(${proj.scale})` }}
+                onClick={() => setTelaAtual('grid_projetos')}
+              >
+                <div className="stack-header">
+                  <span style={{fontSize:'1rem', fontWeight:'bold'}}>×</span>
+                  <span className="stack-url">{proj.url}</span>
+                  <span></span>
+                </div>
+                {/* Verifica se a aba inicial é um vídeo ou uma imagem */}
+{proj.img.includes('.mp4') ? (
+  <video src={proj.img} autoPlay loop muted playsInline style={{width:'100%', height:'calc(100% - 25px)', objectFit:'cover'}}></video>
+) : (
+  <img src={proj.img} alt={proj.titulo} style={{width:'100%', height:'calc(100% - 25px)', objectFit:'cover'}} />
+)}
+              </div>
+            ))}
+          </div>
+            </div>
+      )}
+
+          {/* --- NOVAS NOTIFICAÇÕES (MENSAGENS iPHONE) --- */}
+          <div className="notifications-wrapper">
+            
+            {/* Mensagem 1 */}
+            
+            <div className="ios-msg"
+            onClick={(e) => {
+  e.stopPropagation();
+  window.open("https://wa.me/message/TK32IXQTFVDJM1", "_blank");
+}}>
+              <div className="msg-header">
+                <div className="msg-app">
+                  <div className="msg-icon"><div className="bubble-icon"></div></div>
+                  MENSAGENS
+                </div>
+                <span style={{fontSize: '0.7rem', color: '#666'}}>agora</span>
+              </div>
+              <div className="msg-sender">Kriativo Visual</div>
+              <div className="msg-text">Design, Publicidade, Branding, Identidade.
+              </div>
+            </div>
+
+             {/* --- WIDGET GMAIL (CONTATO/ORÇAMENTO) --- */}
+  <a
+  href="https://wa.me/message/TK32IXQTFVDJM1"
+  target="_blank" // Abre em uma nova aba para não fechar seu site
+  rel="noopener noreferrer"
+  style={{ 
+    textDecoration: 'none',
+    bottom: '122%', 
+    right: '-160%', 
+    width: '600px', 
+    height: '400px', // Mudei para auto para o conteúdo caber
+    padding: '30px', // Reduzi de 150px para 30px para o texto aparecer
+    background: '#ffffff',
+    borderRadius: '25px',
+    boxShadow: '0 15px 35px rgba(0,0,0,0.15)',
+    borderTop: '20px solid #f1f3f4', 
+    borderBottom: '5px solid #f1f3f4',
+    position: 'absolute',
+    cursor: 'pointer',
+    transition: 'transform 0.2s',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '20px'
+  }}
+  onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
+  onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+>
+  {/* NHAS DE CONTROLE NO TOPO (Ajustei a posição para aparecerem) */}
+  <div style={{ display: 'flex', gap: '5px', position: 'absolute', top: '-13px', left: '15px' }}> 
+    <div style={{ fontWeight: '700', fontSize: '3.5rem', color: '#d93025' }}>●</div>
+    <div style={{ fontWeight: '700', fontSize: '3.5rem', color: '#e4cd00' }}>●</div>
+    <div style={{ fontWeight: '700', fontSize: '3.5rem', color: '#25d934' }}>●</div>
+  </div> 
+
+  {/* CONTEÚDO DO E-MAIL */}
+  <div style={{ borderTop: '1px solid #eee', paddingTop: '10px' }}>
+    <div style={{ fontSize: '0.95rem', color: '#333', marginBottom: '10px' }}>
+      <span style={{ color: '#888' }}>Para:</span> kriativovisualcontato
+    </div>
+    <div style={{ fontSize: '0.95rem', color: '#333', marginBottom: '15px' }}>
+      <span style={{ color: '#888' }}>Assunto:</span> Novo Orçamento
+    </div>
+    
+    {/* BOX DE MENSAGEM */}
+    <div style={{ 
+      background: '#f8f9fa', 
+      padding: '15px', 
+      borderRadius: '15px', 
+      fontSize: '0.85rem', 
+      color: '#666', 
+      minHeight: '80px',
+      lineHeight: '1.4',
+      border: '1px solid #eee'
+    }}>
+      Entre em contato e saiba mais 
+    </div>
+    
+    <p style={{ fontSize: '0.7rem', color: '#aaa', marginTop: '10px', textAlign: 'center' }}>
+      (Ao clicar, seu whatsapp será aberto)
+    </p>
+
+  </div>
+
+</a>
+
+            {/* Mensagem 2 */}
+            <div className="ios-msg"
+            onClick={(e) => {
+  e.stopPropagation();
+  window.open("https://www.instagram.com/gram.technologies/", "_blank");
+}}>
+              <div className="msg-header">
+                <div className="msg-app">
+                  <div className="msg-icon"><div className="bubble-icon"></div></div>
+                  MENSAGENS
+                </div>
+                <span style={{fontSize: '0.7rem', color: '#666'}}>agora</span>
+              </div>
+              <div className="msg-sender">Gray Matter</div>
+              <div className="msg-text"> A ciência por trás da escolha. Seja a marca escolhida </div>
+            </div>
+
+          </div>
+
+          {/* Perfil */}                   a               zzxsw                                             
+          <div className="widget" style={{ top: '15%', right: '-10%', width: '650px', height: '500px' }} onClick={() => irPara('bio')}>
+            <img src={imgMapa} alt="Mapa" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+            <div style={{position:'absolute', bottom:10, left:10, background:'white', padding:'2px 8px', borderRadius:8, fontSize:'0.7rem', fontWeight:'bold'}}></div>
+          </div>
+
+         
+       {/* ig - Bloco Corrigido e Simplificado */}
+<div  
+  style={{ 
+    position: 'absolute', 
+    top: '6%', 
+    left: '75%', 
+    transform: 'translate(-70%, -37%)', 
+    textAlign: 'center', 
+    cursor: 'pointer',
+    width: '130px', /* Define uma largura fixa para ajudar na centralização */
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
+  }} 
+  onClick={() => window.open('https://www.instagram.com/kriativo_visual/', '_blank')}
+>
+  <img 
+    src={iconInstagram} 
+    alt="Instagram" 
+    style={{ 
+      width: '160%', 
+      height: 'auto', 
+      display: 'block',
+      marginBottom: '-25px' /* Removendo qualquer espaço extra da imagem */
+    }} 
+  />
+  
+  <p style={{ 
+    fontSize: '1.7rem', 
+    fontWeight: 'bold', 
+    color: '#000', 
+    margin: 0,        /* Zera as margens padrão do navegador */
+    padding: 0,
+    width: '100%',
+    textAlign: 'center'
+  }}>
+Instagram
+  </p>
+</div>
+     
+{/*behence*/}
+<div 
+  style={{ 
+    position: 'absolute', 
+    top: '11%', 
+    left: '70%', 
+    transform: 'translate(61%, -70%)', 
+    textAlign: 'center', 
+    cursor: 'pointer' 
+  }} 
+  onClick={() => window.open('https://www.behance.net/ccalidadi', '_blank')}
+>
+  <img src={iconPasta} alt="Instagram" style={{ width: '170px' }} />
+  
+  <p style={{ fontSize: '1.7rem', fontWeight: 'bold', marginTop: '-8px', color: '#000000' }}>
+   Behance
+  </p>
+</div>
+
+{/*whatsapp*/}
+<div 
+  style={{ 
+    position: 'absolute', 
+    top: '10%', 
+    left: '21%', 
+    transform: 'translate(61%, -70%)', 
+    textAlign: 'center', 
+    cursor: 'pointer' 
+  }} 
+  onClick={() => window.open('https://wa.me/message/TK32IXQTFVDJM1', '_blank')}
+>
+  <img src={zapicon} alt="WhatsApp" style={{ width: '300px' }} />
+  
+  <p style={{ fontSize: '1.7rem', fontWeight: 'bold', marginTop: '-70px', color: '#000000' }}>
+    WhatsApp
+  </p>
+</div>
+
+{/*tiktok*/}
+<div 
+  style={{ 
+    position: 'absolute', 
+    top: '80%', 
+    left: '-6%', 
+    transform: 'translate(61%, -70%)', 
+    textAlign: 'center', 
+    cursor: 'pointer' 
+  }} 
+  onClick={() => window.open('https://www.tiktok.com/@kriativo_visual', '_blank')}
+>
+  <img src={ttkicon} alt="TikTok" style={{ width: '180px' }} />
+  
+  <p style={{ fontSize: '1.7rem', fontWeight: 'bold', marginTop: '-20px', color: '#000000' }}>
+    TikTok
+  </p>
+</div>
+
+
+{/* Ícone de Pasta - Navegação Interna */}
+<div 
+  style={{ 
+    position: 'absolute', 
+    top: '80%', 
+    left: '0%', 
+    transform: 'translate(20%, 20%)', // Ajustado para ficar abaixo do Instagram
+    textAlign: 'center', 
+    cursor: 'pointer' 
+  }} 
+  onClick={() => setTelaAtual('grid_projetos')}
+>
+  <img 
+    src={iconPastaNova} 
+    alt="Meus Projetos" 
+    style={{ 
+      width: '195px', 
+      display: 'block',
+      mixBlendMode: 'multiply' // Remove o fundo branco se a imagem tiver
+    }} 
+  />
+  <p style={{ 
+    fontSize: '1.7rem', 
+    fontWeight: 'bold', 
+    color: '#000', 
+    marginTop: '-25px' 
+    
+  }}>
+  Projetos
+  </p>
+</div>
+
+{/* --- WIDGET INDEPENDENTE: BIO --- */}
+<div 
+  onClick={() => setTelaAtual('bio')}
+  style={{
+    position: 'absolute', top: '700px', left: '-200px', // Ajuste a posição aqui
+    width: '750px', background: '#fff', borderRadius: '20px',height: '600px',
+    boxShadow: '0 10px 25px rgba(0,0,0,0.2)', cursor: 'pointer',
+    borderTop: '20px solid #e0e0e0', borderBottom: '20px solid #e0e0e0',
+    overflow: 'hidden', textAlign: 'center', transition: 'transform 0.2s'
+  }}
+  onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+  onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+>
+  <img src={bio} style={{ width: '100%', height: '562px', objectFit: 'cover' }} alt="Bio Widget" />
+  <p style={{ fontSize: '12px', fontWeight: 'bold', margin: '5px 0', color: '#000' }}></p>
+</div>
+
+{/* --- WIDGET INDEPENDENTE: INSTAGRAM --- */}
+<div 
+  onClick={() => window.open('https://www.instagram.com/gram.technologies/', '_blank')}
+  style={{
+    position: 'absolute', top: '1150px', left: '450px', // Fica ao lado do outro
+    width: '700px', background: '#fff', borderRadius: '25px',height: '550px',
+    boxShadow: '0 10px 25px rgba(0,0,0,0.2)', cursor: 'pointer',
+    borderTop: '12px solid #e0e0e0', borderBottom: '12px solid #e0e0e0',
+    overflow: 'hidden', textAlign: 'center', transition: 'transform 0.2s'
+  }}
+  onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+  onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+>
+  <img src={perfil} style={{ width: '100%', height: '540px', objectFit: 'cover' }} alt="Insta Widget" />
+  <p style={{ fontSize: '12px', fontWeight: 'bold', margin: '5px 0', color: '#000' }}>INSTAGRAM</p>
+</div>
+
+      {/* --- OUTRAS TELAS --- */}
+      {telaAtual === 'detail' && projetoSelecionado && (
+        <div className="window-overlay">
+          <div className="mac-window" style={{width: '800px', height: '90vh'}}>
+            <div className="title-bar"><div className="dot red" onClick={fechar}></div><span style={{fontSize: '0.8rem', color: '#ffffff'}}>{projetoSelecionado.titulo}</span></div>
+            <div style={{padding: '40px', overflowY: 'auto', display:'flex', flexDirection:'column', alignItems:'center'}}>
+              <h1 style={{marginBottom: 20}}>{projetoSelecionado.titulo}</h1>
+              <img src={projetoSelecionado.img} style={{maxWidth: '100%', borderRadius: '8px'}} alt="Detalhe" />
+              <p style={{marginTop: '30px', maxWidth: '600px', lineHeight: 1.6, color: '#fffbfb'}}>Descrição do projeto...</p>
+            </div>
+          </div>
+        </div>
+      )}
+{telaAtual === 'bio' && (
+  <div className="window-overlay">
+    <div className="mac-window" style={{ 
+      padding: '0', 
+      flexDirection: 'column', 
+      width: '900px', 
+      height: '900px', 
+      background: '#ffffff', 
+      borderRadius: '20px',
+      overflow: 'hidden',
+      boxShadow: '0 20px 50px rgba(0,0,0,0.2)'
+    }}>
+      
+      {/* HEADER DA JANELA */}
+      <div style={{ 
+        width: '100%', 
+        padding: '20px', 
+        display: 'flex', 
+        alignItems: 'center', 
+        position: 'relative'
+      }}>
+        <div className="dot red" style={{ cursor: 'pointer' }} onClick={fechar}></div>
+        <h2 style={{ color: '#000', fontSize: '1.5rem', marginLeft: '20px', fontWeight: 'bold' }}>Sobre Mim</h2>
+      </div>
+
+      {/* ÁREA DE CONTEÚDO */}
+      <div style={{ flex: 1, position: 'relative', width: '100%', height: '100%' }}>
+        
+        {/* TEXTO DE INTRODUÇÃO (Agora com mais espaço para crescer) */}
+        <div style={{ textAlign: 'center', padding: '-0px 25px' }}>
+          <p style={{ 
+            fontSize: '1.2rem', 
+            color: '#000', 
+            maxWidth: '750px', 
+            margin: '0 auto', 
+            lineHeight: '1.8',
+            textAlign: 'center' 
+          }}>
+             Kayo Taveira , também conhecido como "Kriativo Visual" é um criativo de 19y  autodidata de goiás , nascido em goiânia onde atualmente cursa o 2 periodo de publicidade e propaganda. Desde novo desenvolveu o gosto por expor suas ideias através da arte e criar coisas do zero, o que resultou em uma ansia de tudo aquilo que pode aprender sobre arte e comuicação e na curiosidade de até onde seu sonho e aquilo que ama podem te levar  . Seu trabalho cruza design, arte, moda e identidade , guiado por uma sensibilidade criativa que move o potencial de tudo que vê. Um coringa diciplinar , Kayo flutua entre projetos de direção criativa ,arte ,design, marcas , artistas e produtos que buscam identidade e originalidade. Sua identidade nasce do choque entre refências de rua e da arte classica e comtemporanea ,unindo arte , moda e cultura urbana . Cada projeto é visto e trabalhado com e  como uma experiência , com  foco maximo aos detalhes, impacto visual e social e a construção de narrativas que se conectam com pessoas e grupos .  
+          </p>
+        </div>
+
+        {/* WIDGETS DESLOCADOS PARA BAIXO */}
+        {/* Foto 1 (Esquerda) */}
+        <div style={{
+          position: 'absolute', bottom: '0px', left: '70px',
+          width: '280px', background: '#fff', borderRadius: '25px',
+          boxShadow: '0 10px 30px rgba(0,0,0,0.15)', transform: 'rotate(-6deg)', zIndex: 3,
+          borderTop: '15px solid #e0e0e0', borderBottom: '15px solid #e0e0e0',
+          overflow: 'hidden'
+        }}>
+          <img src={bio} style={{ width: '100%', height: '220px', objectFit: 'cover' }} alt="Bio 1" />
+        </div>
+
+        {/* Foto 2 (Centro/Topo da pilha inferior) */}
+        <div style={{
+          position: 'absolute', bottom: '0px', left: '310px',
+          width: '280px', background: '#fff', borderRadius: '25px',
+          boxShadow: '0 15px 40px rgba(0,0,0,0.2)', transform: 'rotate(2deg)', zIndex: 5,
+          borderTop: '15px solid #e0e0e0', borderBottom: '15px solid #e0e0e0',
+          overflow: 'hidden'
+        }}>
+          <img src={imgMapa} style={{ width: '100%', height: '260px', objectFit: 'cover' }} alt="Bio 2" />
+        </div>
+
+        {/* Foto 3 (Direita) */}
+        <div style={{
+          position: 'absolute', bottom: '0px', left: '600px',
+          width: '280px', background: '#fff', borderRadius: '25px',
+          boxShadow: '0 10px 30px rgba(0,0,0,0.15)', transform: 'rotate(-3deg)', zIndex: 4,
+          borderTop: '30px solid #e0e0e0', borderBottom: '15px solid #e0e0e0',
+          overflow: 'hidden'
+        }}>
+          <img src={perfil} style={{ width: '100%', height: '220px', objectFit: 'cover' }} alt="Bio 3" />
+        </div>
+
+      </div>
+    </div>
+  </div>
+)}
+      {telaAtual === 'contact' && (
+        <div className="window-overlay">
+           <div className="mac-window" style={{width: '900px', height: '900px'}}>
+             <div className="title-bar"><div className="dot red" onClick={fechar}></div></div>
+             <form style={{padding: '40px', display: 'flex', flexDirection: 'column', gap: '15px', height: '100%'}}>
+               <h2 style={{color: '#333'}}>Fale Comigo</h2>
+               <input placeholder="Email" style={{padding: '12px', border: '1px solid #ddd', borderRadius: 8}} />
+               <textarea placeholder="Mensagem..." style={{padding: '12px', border: '1px solid #ddd', borderRadius: 8, flex: 1, resize: 'none'}}></textarea>
+               <button style={{padding: '12px', background: '#007aff', color: 'white', border: 'none', borderRadius: 8, fontWeight: 'bold'}}>Enviar Email</button>
+             </form>
+           </div>
+        </div>
+      )}
+
+    {/* --- NÍVEL 1: GRADE DE PROJETOS --- */}
+{telaAtual === 'grid_projetos' && (
+  <div className="window-overlay">
+    {/* Adicionei flex e flex-col para separar a barra de título do conteúdo */}
+   <div className="mac-window" style={{ width: '800px' }}>
+      
+      <div className="title-bar">
+        <div className="dot red" onClick={() => setTelaAtual('desktop')}></div>
+        <span style={{ fontSize: '0.8rem', color: '#000000' }}>Meus Projetos</span>
+      </div>
+
+      {/* ESTA DIV ABAIXO É A CHAVE: 
+          - overflowY: 'auto' permite o scroll
+          - flex: 1 faz ela ocupar todo o resto da janela
+      */}
+      <div style={{ 
+        padding: '20px', 
+        display: 'grid', 
+        gridTemplateColumns: 'repeat( 1fr)', 
+        gap: '20px', 
+        overflowY: 'auto', 
+        flex: 1 
+      }} className="custom-scrollbar">
+        
+        {meusProjetos.map(proj => (
+          <div key={proj.id} onClick={() => { setProjetoSelecionado(proj); setTelaAtual('galeria_projeto'); }} style={{ cursor: 'pointer', textAlign: 'center' }}>
+            {/* Ajustei o width para 100% para ele respeitar a grade de 3 colunas */}
+           {/* Verifica se a capa é um vídeo ou imagem */}
+{/* Verifica se a capa CONTÉM .mp4 no nome */}
+{proj.capa.includes('.mp4') ? (
+  <video src={proj.capa} autoPlay loop muted playsInline style={{ width: '100%', aspectRatio: '1/1', objectFit: 'cover', borderRadius: '10px' }}></video>
+) : (
+  <img src={proj.capa} style={{ width: '100%', aspectRatio: '1/1', objectFit: 'cover', borderRadius: '10px' }} />
+)}
+            <p style={{ fontSize: '12px', marginTop: '5px', color: '#0f0f0f' }}>{proj.titulo}</p>
+          </div>
+        ))}
+
+      </div>
+    </div>
+  </div>
+)}
+
+      {/* --- NÍVEL 2: GALERIA DO PROJETO (Abre ao clicar em um projeto específico) --- */}
+      {telaAtual === 'galeria_projeto' && projetoSelecionado && (
+        <div className="window-overlay">
+          <div className="mac-window" style={{width: '900px', height: '200vh'}}>
+            <div className="title-bar">
+              {/* O botão vermelho aqui volta para a GRADE de projetos, não para o desktop */}
+              <div className="dot red" onClick={() => setTelaAtual('grid_projetos')}></div>
+              <span style={{fontSize: '0.8rem', color: '#0e0d0d'}}>{projetoSelecionado.titulo}</span>
+            </div>
+            <div style={{padding: '30px', overflowY: 'auto', textAlign: 'center'}}>
+              <h2>{projetoSelecionado.titulo}</h2>
+              <p style={{color: '#797777', marginBottom: '20px'}}>{projetoSelecionado.descricao}</p>
+              
+        <div style={{display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center'}}>
+  {projetoSelecionado.fotos.map((url, index) => (
+    url.includes('.mp4') ? (
+      <video key={index} src={url} autoPlay loop muted playsInline style={{width: '90%', borderRadius: '10px', boxShadow: '0 4px 10px rgba(0,0,0,0.3)'}}></video>
+    ) : (
+      <img key={index} src={url} style={{width: '90%', borderRadius: '10px', boxShadow: '0 4px 10px rgba(0,0,0,0.3)'}} />
+    )
+  ))}
+</div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+{/* Widget Perfil iCloud */}
+<div className="icloud-profile-widget" style={{ top: '200px', left: '200px' }}>
+  <div className="icloud-avatar-container">
+    <img 
+      src={fotoPerfil} 
+      alt="Perfil iCloud" 
+      className="icloud-avatar" 
+    />
+  </div>
+  <div className="icloud-info">
+    <h2 className="icloud-name">Kayo Taveira</h2>
+    <p className="icloud-details">ID Apple, iCloud+, Mídia e Compras</p>
+  </div>
+  {/* Ícone de seta lateral característico do iOS */}
+  <div className="icloud-arrow">
+    <svg width="8" height="13" viewBox="0 0 8 13" fill="none">
+      <path d="M1.5 1.5L6.5 6.5L1.5 11.5" stroke="#C7C7CC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+    </div>
+  </div>
+
+  
+
+
+
+
+export default App;
+
