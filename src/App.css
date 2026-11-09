@@ -164,7 +164,7 @@ body {
   max-height: 200vh; 
 }
 .title-bar { height: 40px; background: #f3f3f3; border-bottom: 1px solid #ddd; display: flex; align-items: center; padding: 0 15px; gap: 8px; }
-.dot { width: 12px; height: 12px; border-radius: 50%; }
+.dot { width: 24px; height: 24px; border-radius: 50%; }
 .red { background: #ff5f57; cursor: pointer; } .yellow { background: #febc2e; } .green { background: #28c840; }
 
 .icloud-profile-widget {

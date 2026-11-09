@@ -406,9 +406,9 @@ function App() {
 >
   {/* NHAS DE CONTROLE NO TOPO (Ajustei a posição para aparecerem) */}
   <div style={{ display: 'flex', gap: '5px', position: 'absolute', top: '-13px', left: '15px' }}> 
-    <div style={{ fontWeight: '700', fontSize: '3.5rem', color: '#d93025' }}>●</div>
-    <div style={{ fontWeight: '700', fontSize: '3.5rem', color: '#e4cd00' }}>●</div>
-    <div style={{ fontWeight: '700', fontSize: '3.5rem', color: '#25d934' }}>●</div>
+    <div style={{ fontWeight: '700', fontSize: ' 2.0rem', color: '#d93025' }}>●</div>
+    <div style={{ fontWeight: '700', fontSize: '2.0rem', color: '#e4cd00' }}>●</div>
+    <div style={{ fontWeight: '700', fontSize: '2.0rem', color: '#25d934' }}>●</div>
   </div> 
 
   {/* CONTEÚDO DO E-MAIL */}
